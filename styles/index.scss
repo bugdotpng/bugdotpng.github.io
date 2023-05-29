@@ -47,5 +47,133 @@ table {
 	border-spacing: 0;
 }
 
+/* END RESET */
 
-p {color:red;}
+/*SETTING SASS VARIABLES*/
+$gray-800:#222222;
+$gray-900:#111111;
+$black:#000000;
+$white:#ffffff;
+$accent:#bada55;
+$accent2:#f00ba2;
+
+
+$worksans:"Work Sans", sans-serif;
+
+
+body {
+	background:$gray-800;
+	color:$white;
+	font-family:$worksans;
+	line-height:1.5;
+}
+
+a {
+	color:$accent;
+	text-decoration:none;
+	border-bottom:dotted $accent 1px;
+	transition:0.2s ease;
+	&:hover {
+		color:$accent2;
+		border-bottom:solid $accent2 1px;
+	}
+
+}
+
+header {
+	background:$gray-900;
+	display:flex;
+	justify-content:space-between;
+	border-bottom:solid $accent 1px;
+	.header-container {
+	.site-title {
+		font-weight:900;
+		text-transform:uppercase;
+		padding:1rem;
+	}
+}
+.nav-container {
+	ul {
+		display:flex;
+		gap:1rem;
+		list-style-type:none;
+		li {
+			a {
+				text-decoration:none;
+				padding:1rem;
+				display:block;
+				background:transparent;
+				transition:0.2s ease;
+				color:$accent;
+				border:none;
+				&:hover{
+					background:$accent;
+					color:$gray-800;
+					border:none;
+				}
+			}
+		}
+	}
+}
+
+}
+
+.main {
+	max-width:750px;
+	margin:0 auto;
+	padding:2rem;
+	border-radius:16px;
+	background:$gray-900;
+	margin-top:2rem;
+	h1 {
+		font-size:3rem;
+		text-transform:uppercase;
+		font-weight:800;
+		margin-bottom:1rem;
+	}
+	p {
+		margin-bottom:.5rem;
+	}
+	h2 {
+		font-size:2rem;
+		font-weight:600;
+		font-style:italic;
+		margin-top:1rem;
+	}
+	h3 {
+		font-size:1.5rem;
+		font-weight:400;
+		text-transform:uppercase;
+		margin-top:1rem;
+		border-bottom:dotted $accent2 1px;
+		padding-bottom:.25rem;
+		margin-bottom:.5rem;
+	}
+
+	ul {
+		list-style-type:disc;
+		margin-left:1.5rem;
+		li {
+			margin-bottom:.3rem;
+			&:last-child{margin-bottom:0;}
+			&::marker {color:$accent;}
+		}
+	}
+}
+
+footer {
+	.footer-container {
+		max-width:600px;
+		margin:0 auto;
+		border-top: dotted $accent 1px;
+		padding-top:2rem;
+		margin-top:2rem;
+		margin-bottom:2rem;
+	}
+	.social {
+		display:flex;
+		justify-content:center;
+		gap:1rem;
+		margin-top:1rem;
+	}
+}
