@@ -13,6 +13,7 @@
   <body>
     <header>
         <p class="banner"><strong>Work In Progress</strong> &bull; This page is under construction! I'm still writing a lot of this. Standby!</p>
+        <a class="back" href="../index.html">Back to Vice Versa menu</a>
     </header>
     <main>
         <aside>
@@ -21,8 +22,9 @@
                 <li><a href="#glossary">Glossary</a></li>
                 <li class="has-child"><a href="#cvrs">What is CVRS?</a>
                     <ul>
-                        <li><a href="#">Sectors</a></li>
-                        <li><a href="#">Treatment Guidelines</a></li>
+                        <li><a href="#cvrs-wards">Wards</a></li>
+                        <li><a href="#cvrs-sectors">Sectors</a></li>
+                        <li><a href="#cvrs-treatment">Treatment Guidelines</a></li>
                     </ul>
                 </li>
                 <li><a href="#phases">Host Phases</a></li>
@@ -48,7 +50,7 @@
         </p>            
         </div>
         <h2 id="glossary">Glossary</h2>
-        <p>Find definitions for common industry terms below. You'll likely hear these terms when speaking with an Intake Coordinator or Vice Management Specialist. <a href="#cvrs">Find more information about CVRS processes here.</a></p>
+        <p>Find definitions for common industry terms below. You'll likely hear these terms when speaking with an Intake Coordinator or Vice Management Specialist. <a href="#cvrs">Learn more about CVRS-specific processes here.</a></p>
         <div class="search-bar">
         <label for="filter">Filter glossary terms</label>
         <input type="text" id="filter" name="Glossary Filter" onkeyup="myFunction()" placeholder="Begin typing...">
@@ -124,12 +126,183 @@
                 <p class="alert-heading error">Notice</p>
                 <p>If you are currently in crisis, call <tel>1-800-420-6969</tel> to speak with our expertly-trained Vice Management Specialists or stop by one of the many CVRS stations available in your area.</p>
             </div>
-            <h3>Sectors</h3>
+            <div class="alert">
+                <p class="alert-heading error">Notice</p>
+                <p>Our servers and helpdesks are currently at capacity, and we are experiencing longer wait times than usual. If you are experiencing a life-threatening Branch, call your nearest Adjunct and dial 211* to deploy your local Urgent Care team. CVRS is not liable for any failed Rescissions and cannot guarantee timely responses.<span class="footnote">* Additional fees may apply</span></p>
+            </div>
+            <h3 id="cvrs-wards">Wards</h3>
+            <p>Each CVRS station is separated into two distinct wards, both of which are open to the public.</p>
+            <div class="split-col">
+                <div class="col">
+                    <h4>Passive<div class="badges"><span class="badge passive">Passive</span></div></h4>
+                    <p>Primarily concerned with providing long-term care while aggregating data to send to the Research Sector and Active Ward.</p>
+                    <p>Each Passive Ward consists of at least one:</p>
+                    <ul>
+                        <li>Intake Coordinator</li>
+                        <li>Vice Management Specialist</li>
+                        <li>Branch Recovery Specialist</li>
+                        <li>Forecast Specialist</li>
+                        <li>Report Coordinator</li>
+                        <li>Behavioral Analyst</li>
+                        <li>Blight Analyst</li>
+                    </ul>
+                    <p>Most agents in the Passive Ward are not trained to engage in Branches, though Intake Coordinators and Vice Management Specialists are able to Suspend Branches if a rogue Branch occurs before the Host is admitted to the Active Ward.</p>
+                </div>
+                <div class="col">
+                    <h4>Active<div class="badges"><span class="badge active">Active</span></div></h4>
+                    <p>Predominantly focused on mitigating rogue Branches by acting on the research provided by the Passive Ward.</p>
+                    <p>Each Active Ward consists of two teams:</p>
+                    <h5>Internal</h5>
+                    <p>The team holding down the fort, taking public walk-ins and admissions from the Passive Ward. Urgent Care is deployed by the order of the Floor Manager on staff.</p>
+                    <ul>
+                        <li>
+                            Urgent Care
+                            <ul>
+                                <li>Branch Specialist</li>
+                                <li>Triage Specialist</li>
+                                <li>Vice Analyst</li>
+                            </ul>
+
+                        </li>
+                        <li>Intake Coordinator</li>
+                        <li>Floor Manager</li>
+                    </ul>
+                    <h5>External</h5>
+                    <p>The boots-on-the-ground team deployed out into the public, on call to respond to rogue or underprepared Branches 24/7. Urgent Care is deployed by the order of the Target Hunter on duty.</p>
+                    <ul>
+                        <li>Urgent Care
+                            <ul>
+                                <li>Branch Specialist</li>
+                                <li>Triage Specialist</li>
+                                <li>Vice Analyst</li>
+                            </ul>
+                        </li>
+                        <li>Target Hunter</li>
+                        <li>Branch Analyst</li>
+                        <li>Optional: Dispersion Analyst</li>
+                    </ul>
+                </div>
+            </div>
+            <h3 id="cvrs-branch-training">Branch Training</h3>
+            <p>Many CVRS agents are required to receive varying levels of Branch Training prior to their official start date. The level of training coincides with the agent's role.</p>
+            <div class="split-col">
+                <div class="col">
+                    <h4>Basic Training <div class="badges"><span class="badge month">4 Weeks</span></div></h4>
+                    <p>Here's some shit about basic training.</p>
+                </div>
+                <div class="col">
+                    <h4>Extend <div class="badges"><span class="badge month">6 Weeks</span></div></h4>
+                    <p>Here's some more shit.</p>
+                </div>
+            </div>
+            <div class="split-col">
+                <div class="col">
+                    <h4>Suspend <div class="badges"><span class="badge month">8 Weeks</span></div></h4>
+                    <p>Here's some more shit.</p>
+                </div>
+                <div class="col">
+                    <h4>Commit <div class="badges"><span class="badge month">12 Weeks</span></div></h4>
+                    <p>Here's some more shit.</p>
+                </div>
+            </div>
+            <div class="split-col-jk">
+            <div class="col">
+                <h4>Rescind <div class="badges"><span class="badge month">16 Weeks</span></div></h4>
+                <p>Here's some more shit.</p>
+            </div>
+        </div>
+
+            <h3 id="cvrs-sectors">Sectors</h3>
             <p>CVRS is divided into three sectors: Public Safety, Public Health, and Research. Each sector is tasked with unique roles, but often collaborate with other sectors to aggregate or share data.</p>
-            <p>Each CVRS station has two Urgent Care teams (internal and external), each comprised of an agent from the three sectors, namely a Branch Specialist, Triage Specialist, and Branch Analyst. The internal Urgent Care team is on call at the local CVRS station and is deployed by the order of a <a href="floor-manager">Floor Manager</a>. The external team is on call across the designated CVRS support area and is deployed by the order of a <a href="#target-hunter">Target Hunter</a>.</p>
-            <h4>Public Safety</h4>
+            <p>Each Sector contains agents from both the Passive and Active wards to ensure an efficient and holistic approach to care and research. Urgent Care teams have representation from each Sector to ensure that the most thoughtful and informed actions can be taken to serve our community.</p>
+            <div class="small">
+            <p>Some agents from the Research Sector are deployed as Silent Adjuncts with a role to simply observe and collect data. While they are technically considered part of the Urgent Care team, Silent Adjuncts are not trained to engage in Branches, nor is it biologically possible to do so.* <a href="#adjuncts">Learn more in The Role of Adjuncts.</a></p>
+            <p class="footnote">* As is understood by our current set of data, 2023.</p>
+            </div>
+            <h4>CVRS At a Glance</h4>
+            <table class="table">
+                <tr>
+                    <th scope="col">Sector</th>
+                    <th scope="col">Agent Role</th>
+                    <th scope="col">Ward</th>
+                    <th scope="col">Urgent Care?</th>
+                </tr>
+                <tr>
+                    <td rowspan="4" class="sector"><a href="#public-safety">Public Safety</a></td>
+                    <td>Forecast Specialist</td>
+                    <td><div class="badges"><span class="badge passive">Passive</span></div></td>
+                    <td>No</td>
+                </tr>
+                <tr>
+                    <td>Report Coordinator</td>
+                    <td><div class="badges"><span class="badge passive">Passive</span></div></td>
+                    <td>No</td>
+                </tr>
+                <tr>
+                    <td>Target Hunter</td>
+                    <td><div class="badges"><span class="badge active">Active</span></div></td>
+                    <td>No</td>
+                </tr>
+                <tr>
+                    <td>Branch Specialist</td>
+                    <td><div class="badges"><span class="badge active">Active</span></div></td>
+                    <td><div class="badges"><span class="badge urgent">Urgent Care</span></div></td>
+                </tr>
+                <tr class="border-top">
+                    <td class="sector" rowspan="5"><a href="#public-health">Public Health</a></td>
+                    <td>Floor Manager</td>
+                    <td><div class="badges"><span class="badge active">Active</span></div></td>
+                    <td>No</td>
+                </tr>
+                <tr>
+                    <td>Triage Specialist</td>
+                    <td><div class="badges"><span class="badge active">Active</span></div></td>
+                    <td><div class="badges"><span class="badge urgent">Urgent Care</span></div></td>
+                </tr>
+                <tr>
+                    <td>Intake Coordinator</td>
+                    <td><div class="badges"><span class="badge active">Active</span></div></td>
+                    <td>No</td>
+                </tr>
+                <tr>
+                    <td>Vice Management Specialist</td>
+                    <td><div class="badges"><span class="badge passive">Passive</span></div></td>
+                    <td>No</td>
+                </tr>
+                <tr>
+                    <td>Branch Recovery Specialist</td>
+                    <td><div class="badges"><span class="badge passive">Passive</span></div></td>
+                    <td>No</td>
+                </tr>
+                <tr class="border-top">
+                    <td rowspan="5" class="sector"><a href="#research">Research</a></td>
+                    <td>Vice Analyst</td>
+                    <td><div class="badges"><span class="badge active">Active</span></div></td>
+                    <td><div class="badges"><span class="badge urgent">Urgent Care</span></div></td>
+                </tr>
+                <tr>
+                    <td>Branch Analyst</td>
+                    <td><div class="badges"><span class="badge active">Active</span></div></td>
+                    <td><div class="badges"><span class="badge silent">Silent</span></div></td>
+                </tr>
+                <tr>
+                    <td>Behavioral Analyst</td>
+                    <td><div class="badges"><span class="badge passive">Passive</span></div></td>
+                    <td>No</td>
+                </tr>
+                <tr>
+                    <td>Blight Analyst</td>
+                    <td><div class="badges"><span class="badge passive">Passive</span></div></td>
+                    <td>No</td>
+                </tr>
+                <tr>
+                    <td>Dispersion Analyst</td>
+                    <td><div class="badges"><span class="badge active">Active</span></div></td>
+                    <td><div class="badges"><span class="badge silent">Silent</span></div></td>
+                </tr>
+              </table> 
+            <h4 id="public-safety">Public Safety</h4>
             <p>The Public Safety sector is primarily concerned with public relations, and are the public-facing, communications team of CVRS. Public Safety agents are specially trained in social and behavioral sciences and are either actively or passively aggregating data, depending on an agent's focus.</p>
-            <p>Each sector can be further classified in Passive and Active teams. Passive teams are typically concerned with aggregating data, while Active teams are making decisions based on said data.</p>
             <dl class="cvrs-list">
                 <div class="description-block">
                 <dt id="forecast-specialist">Forecast Specialist<div class="badges"><span class="badge passive">Passive</span></div></dt>
@@ -157,41 +330,97 @@
                 </dd>
             </div>
             </dl>
-            <h4>Public Health</h4>
+            <h4 id="public-health">Public Health</h4>
             <p>The Public Health sector is broad in its skillset, though it focuses mostly on administering medical care, treatment, and support to Hosts, including pharmacological and therapeutic treatments. Public Health agents are well-versed in the physiological effects of Vices on Hosts and the appropriate treatments to administer.</p>
             <dl class="cvrs-list">
                 <div class="description-block">
                 <dt id="floor-manager">Floor Manager<div class="badges"><span class="badge active">Active</span></div></dt>
                 <dd>
                     Oversees the intake bay and is the first responder trained to Commit any rogue Branches; Floor Managers are information banks ready for anything from a generic Branch to incredibly niche extremes; they have a strong relationship with Branch and Behavioral Analysts
+                    <ul>
+                        <li><strong>Equipment:</strong> Parsing Goggles, Patch, Pager</li>
+                        <li><strong>Branch Training Level:</strong> Commit</li>
+                    </ul>
                 </dd>
             </div>
             <div class="description-block">
                 <dt id="triage">Triage Specialist<div class="badges"><span class="badge active">Active</span><span class="badge urgent">Urgent Care</span></div></dt>
                 <dd>
                     Performs physicals and reviews intake reports to quickly determine treatment for the Branch Specialist; trained to Suspend in the event of a rogue Branch or lack of Branch Specialist
+                    <ul>
+                        <li><strong>Equipment:</strong> Parsing Goggles, Pager</li>
+                        <li><strong>Branch Training Level:</strong> Suspend</li>
+                    </ul>
                 </dd>  
             </div>
             <div class="description-block">
                 <dt id="intake-coordinator">Intake Coordinator<div class="badges"><span class="badge active">Active</span></div></dt>
                 <dd>
-                    There are two stations for an intake coordinator: internal (on-site, manning the CVRS intake desk) or external (traveling alongside Urgent Care); intake coordinators are essentially Branch stenographers, documenting every possible thing that could aid the triage specialist in determining treatment
+                    An extremely skilled public relations agent that is the face of either the Passive or Active ward; both Intake Coordinators handle media, while Passive Intake Coordinators handle public admissions, and Active Intake Coordinators handle rouge Branches and Urgent Care requests; Intake Coordinators are extremely observant and provide the first wave of data collected from the Host
+                    <ul>
+                        <li><strong>Equipment:</strong> Parsing Goggles, Pager</li>
+                        <li><strong>Branch Training Level:</strong> Suspend</li>
+                    </ul>
                 </dd>
             </div>
             <div class="description-block">
                 <dt id="vice-management">Vice Management Specialist<div class="badges"><span class="badge passive">Passive</span></div></dt>
                 <dd>
-                    Provides long-term care and guidance on Vice Management; works predominantly with Hosts who forego Rescission, but can also guide a Host through the process of Rescission alongside a Branch Specialist, if desired
+                    Provides long-term care and treatment plans for Vice Management; works predominantly with Hosts who forego Rescission, but can also guide a Host through the process of Rescission alongside a Branch Specialist and Vice Analyst, if desired
+                    <ul>
+                        <li><strong>Equipment:</strong> Parsing Goggles, Patch</li>
+                        <li><strong>Branch Training Level:</strong> Rescind</li>
+                    </ul>
                 </dd>
             </div>            
             <div class="description-block">
                 <dt id="branch-recover-specialist">Branch Recovery Specialist<div class="badges"><span class="badge passive">Passive</span></div></dt>
                 <dd>
                     Predominantly works with Hosts who have recently experienced a difficult Branch or had adverse effects after a Commit or Suspension; they often partner with Blight Analysts to record any anomalies and provide care plans; will hand a Host off to a Vice Management Specialist if they’re not responding to treatment or appear to have chronic symptoms
+                    <ul>
+                        <li><strong>Equipment:</strong> Parsing Goggles</li>
+                        <li><strong>Branch Training Level:</strong> Extend</li>
+                    </ul>
                 </dd>
             </div>
-            </dl>            
-            <h3>Treatment Guidelines</h3>
+            </dl> 
+             
+            <h4 id="research">Research</h4>
+            <p>The Research sector compiles and studies the data gathered by active agents. Research agents collaborate closely with Forecast Specialists, Report Coordinators, and Intake Coordinators to review, compile, and parse data.</p>
+            <dl class="cvrs-list">
+                <div class="description-block">
+                    <dt id="vice-analyst">Vice Analyst<div class="badges"><span class="badge active">Active</span><span class="badge urgent">Urgent Care</span></div></dt>
+                    <dd>
+                        Deployed to active Branches to observe and aggregate data about Vices and their respective Branches; Vice Analysts focus on high-level, big-picture data and are often looking for both trends and anomalies, but are trained to Commit or Suspend Branches as a last resort. Many Vice Analysts go on to specialize in specific analyses, such as Branches, Vice behavior, Blights, and Dispersion. While not incredibly skilled in any specific area, Vice Analysts are the only agents in the Research Sector to be deployed as actively involved Adjuncts, rather than Silent Adjuncts.
+                    </dd>
+                </div>
+                <div class="description-block">
+                    <dt id="branch-analyst">Branch Analyst<div class="badges"><span class="badge active">Active</span><span class="badge silent">Silent</span></div></dt>
+                    <dd>
+                        Focuses predominantly on the science of Branches and the physiological effects of Branches on the mind and body of both Hosts and Adjuncts. Branch Analysts are often deployed with the Urgent Care team as a Silent Adjunct and very rarely aid in Commits.
+                    </dd>
+                </div>
+                <div class="description-block">
+                    <dt id="behavioral-analyst">Behavioral Analyst<div class="badges"><span class="badge passive">Passive</span></div></dt>
+                    <dd>
+                        Focuses on Vice Behaviors as they build up to and recover from Branches; Behavioral Analysts work alongside Vice Management Specialists to follow Hosts through treatment plans, track progress, and report anomalies or successful treatments.
+                    </dd>
+                </div>
+                <div class="description-block">
+                    <dt id="blight-analyst">Blight Analyst<div class="badges"><span class="badge passive">Passive</span></div></dt>
+                    <dd>
+                        A fairly niche field focused exclusively on Blight manifestation and the effects prolonged Blights can have on a Host's body; while many are focused on furthering research, Blight Analysts are also qualified to prescribe Suppressants and treatment plans under the guidance of a Vice Management Specialist.
+                    </dd>
+                </div>
+                <div class="description-block">
+                    <dt id="dispersion-analyst">Dispersion Analyst<div class="badges"><span class="badge active">Active</span><span class="badge silent">Silent</span></div></dt>
+                    <dd>
+                        An incredibly niche and understaffed field focused exclusively on the science of Dispersion, though they are often unable to assist in preventing Dispersion, as they are only involved as a Silent Adjunct; while uncommon, the presence of a Dispersion Analyst at a Branch is widely regarded as a death sentence. Only a handful of Hosts have managed a successful Resolution despite the presence of a Dispersion Analyst.
+                    </dd>
+                </div>
+            </dl> 
+
+            <h3 id="cvrs-treatment">Treatment Guidelines</h3>
             <p>lorem ipsum</p>
         <h2 id="phases">Host Phases</h2>
         <p>After Advent, Hosts are categorized into phases that predominantly guide an Intake Coordinator or Urgent Care team in determining treatment.</p>
