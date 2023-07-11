@@ -221,3 +221,178 @@ margin:1rem;
 
     }
 }
+
+.bio-container {
+    font-family:'Source Code Pro', monospace;
+    .bio-grid {
+        display:grid;
+        grid-template-columns: 1fr 1fr 1fr ;
+        max-width:1100px;
+        margin:0 auto;
+        gap:2rem;
+        margin-top:2rem;
+        margin-bottom:2rem;
+        .grid-item {
+            border:none;
+            border:solid $teal 3px;
+            border-radius:16px;
+            padding:1rem;
+            box-shadow:none;
+            display:block;
+            font-weight:normal;
+            background:$white;
+            position:relative;
+            align-self:start;
+            &.emory {
+                border-bottom: solid $teal 5px;
+                border-left: solid $teal 2px;
+                border-radius:8px;
+                .lanyard {width:125px;height:8px;}
+                .logo {
+                    transform: rotate(-1deg) scale(.9);
+                    filter:blur(.5px);
+                    padding:0;
+                    width:100%;
+                    opacity:.8;
+                }
+                img {padding:.5rem;width:90%;}
+                h2 {
+                    opacity:.8;
+                    font-size:1.3rem;
+                }
+                .stats {
+                    opacity:.8;
+                    p {
+                        color:$gray-800;
+                        strong {
+                            font-weight:normal;
+                            color:$black;
+                        }
+                    }
+                }
+            }
+            &.staff {
+                border:solid $gold 3px;
+                &:hover {
+                    box-shadow: 5px 5px 0px $gold;
+                }
+            }
+            &:hover {
+                border:none;
+                border:solid $cobalt 3px;
+                box-shadow:none;
+                transform: rotate(-3deg) scale(1.05);
+                box-shadow: 5px 5px 0px $teal;
+            }
+            &:nth-child(2n) {
+                &:hover {
+                    transform: rotate(3deg) scale(1.05);
+                }
+            }
+            img {
+                width:100%;
+                aspect-ratio:1/1;
+                object-fit:cover;
+                &.logo {
+                    aspect-ratio:auto;
+                    object-fit:none;
+                    margin-bottom:.5rem;
+                }
+            }
+            .lanyard {
+                width:75px;
+                height:10px;
+                border-radius:11px;
+                content:'';
+                background:$gray-300;
+                display:block;
+                margin:0 auto;
+                margin-bottom:1rem;
+                transition:0.2s ease;
+            }
+            h2 {
+                font-size:1.5rem;
+                font-weight:bold;
+                color:$cobalt;
+                display:flex;
+                justify-content:space-between;
+                line-height:1.2;
+                margin-top:.5rem;
+            }
+            .stats {
+                margin-top:1rem;
+                p {
+                    display:flex;
+                    justify-content:space-between;
+                    border-bottom:dashed 1px $gray-300;
+                    padding-bottom:.5rem;
+                    margin-bottom:.5rem;
+                    &:last-child, &:only-child {
+                        margin-bottom:0;
+                        border-bottom:0;
+                    }
+                }
+            }
+            .status {
+                color:$white;
+                padding:.5rem;
+                border-radius:11px;
+                text-transform:uppercase;
+                font-size:.9rem;
+                margin-top:.5rem;
+                position:absolute;
+                margin-left:-.5rem;
+                display:inherit;
+                border:solid $white 2px;
+                transform: rotate(-7deg);
+                &.active {
+                    background:$red;
+                    &.emory {
+                        background:$rouge;
+                        font-size:1.1rem;
+                        transform: rotate(3deg);
+                        margin-top:1rem;
+                    }
+                }
+                &.cleared {
+                    background:$teal;
+                }
+
+            }
+            p {
+                line-height:1.5;
+                &.staff {
+                    display:flex;
+                    border:none;
+                    align-items:center;
+                    text-transform:uppercase;
+                    font-weight:bold;
+                    color:$teal;
+                    text-align:center;
+                    padding-bottom:0;
+                    margin-bottom:0;
+                    &:before, &:after {
+                        content:'';
+                        background:$gold;
+                        display:block;
+                        width:100%;
+                        height:1px;
+                    }
+                    &:before {
+                        margin-right:.5rem;
+                    }
+                    &:after {
+                        margin-left:.5rem;
+                    }
+                }
+                &.title {
+                    border:none;
+                    font-style:italic;
+                    font-size:.9rem;
+                    color:$teal;
+                }
+            }
+
+        }
+    }
+}

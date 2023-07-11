@@ -348,6 +348,10 @@ aside {
             ul {
                 list-style-type:disc;
                 margin:1rem 0 0 1rem;
+                &.two-col {
+                    column-count:2;
+                    column-gap:1rem;
+                }
                 li {
                     &::marker {
                         color:$teal;
@@ -399,9 +403,9 @@ aside {
 
     h4 {
         font-size:1.25rem;
-        color:$gray-700;
+        color:$gray-600;
         font-style:italic;
-        font-weight:500;
+        font-weight:bold;
         margin-bottom:.5rem;
         margin-top:1.5rem;
     }
@@ -471,7 +475,7 @@ aside {
             &.urgent {
                 background:$rouge;
             }
-            &.silent {
+            &.pseudo {
                 background:$white;
                 border:solid $rouge 1px;
                 color:$rouge;
@@ -480,24 +484,63 @@ aside {
     }
 
     .vice-class-block {
-        display:flex;
-        align-items:flex-start;
-        gap:2rem;
-        @include respond-to('medium') {flex-wrap:wrap;}
 
         .classes {
-            width:66%;
-            @include respond-to('medium') {width:100%;order:2;}
-
-            .nav-list {
+            .classes-intro {
                 display:flex;
-                flex-wrap:wrap;
                 gap:1rem;
-                margin-bottom:1.5rem;
+                @include respond-to('large') {flex-wrap:wrap;}
+
+                .intro {
+                    width:33%;
+                    @include respond-to('large') {width:100%;}
+
+                }
+                .threats {
+                    width:66%;
+                    @include respond-to('large') {width:100%;}
+
+                    border:solid $gray-300 1px;
+                    border-radius:11px;
+                    padding:1rem;
+                    align-self:flex-start;
+                    ul {
+                        li {
+                            margin-bottom:1.5rem;
+                            display:flex;
+                            align-items:center;
+                            gap:1rem;
+                            span {
+                                width:15%;
+                                text-align:center;
+                            }
+                            p {
+                                width:85%;
+                            }
+                            &:last-child {
+                                margin-bottom:0;
+                                padding-bottom:0;
+                            }
+                            p {
+                                margin:0;
+                                padding:0;
+                            }
+
+                        }
+                    }
+                    h3 {
+                        border-bottom: dotted $gray-300 1px;
+                        margin-bottom:1rem;
+                        &:before {
+                            display:none;
+                        }
+                    }
+                }
             }
             dl {
                 padding:0;
                 padding-top:2rem;
+                margin-bottom:2rem;
                 dt {
                     display:flex;
                     justify-content:space-between;        
@@ -526,26 +569,6 @@ aside {
                 background-color:#E76F51;
             }
         }
-        .threats {
-            border: solid $gray-300 1px;
-            padding:1rem;
-            border-radius:11px;
-            width:33%;
-            @include respond-to('medium') {width:100%;order:1;}
-
-            h3 {
-                margin-bottom:1rem;
-            }
-            ul {
-
-                li {
-                    margin-bottom:1rem;
-                    &:last-child, &:only-child {margin-bottom:0;}
-
-                    p {margin:0;padding:0;font-size:.9rem;}
-                }
-            }
-        }
     }
 
 
@@ -553,6 +576,32 @@ aside {
 
 table.table {
     width:100%;
+    caption {
+        font-style:italic;
+        text-align:left;
+        font-size:.9rem;
+        padding:1rem;
+        background:$gray-100;
+        margin-top:1rem;
+        margin-bottom:2rem;
+        p {
+            margin:0;
+            padding:0;
+        }
+
+    }
+    &.adjunct {
+        tr {
+            td, th {
+                width:calc(100%/6);
+            }
+            &:last-child {
+                th {
+                    border-bottom:solid $gray-300 1px;
+                }
+            }
+        }
+    }
     .border-top{
        border-top: solid $gray-300 3px;
     }
@@ -599,6 +648,30 @@ table.table {
             margin-bottom:.5rem;
             div {
                 color:$black;
+            }
+        }
+        .training-label {
+            border-bottom:dashed $gray-300 1px;
+            margin-bottom:.5rem;
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            .level {
+                color:$black;
+                font-size:.9rem;
+                text-transform:uppercase;
+                display:block;
+                margin-bottom:-.25rem;
+                font-weight:bold;
+                font-style:normal;
+            }
+            h4 {
+                display:block;
+            }
+            .badge.month {
+                color:$cobalt;
+                font-style:normal;
+                border:solid $cobalt 1px;
             }
         }
         ul {
