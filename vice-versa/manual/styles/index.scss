@@ -712,3 +712,27 @@ h5 {
     .footnote {font-style:italic;font-size:.8rem;}
 
 }
+
+.life-cycle {
+    display:flex;
+    gap:1rem;
+    justify-content:center;
+    p {
+        padding:0;
+        margin:0;
+        display:flex;
+        align-items:center;
+        &:after {
+            content:'>>';
+            padding-left:1rem;
+            font-size:.6rem;
+            font-weight:bold;
+        }
+        &:last-child {
+            &:after {
+                content:none;
+                padding:0;
+            }
+        }
+    }
+}
