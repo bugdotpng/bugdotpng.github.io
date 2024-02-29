@@ -214,13 +214,10 @@ aside ul li ul li::before {
   }
 }
 .main .version {
-  display: block;
   font-size: 1.25rem;
-  font-style: italic;
   font-weight: bold;
   text-transform: uppercase;
   margin-bottom: 1rem;
-  margin-left: 1rem;
 }
 .main .cvrs {
   display: block;
@@ -656,4 +653,26 @@ h5 {
 .small .footnote {
   font-style: italic;
   font-size: 0.8rem;
+}
+
+.life-cycle {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+.life-cycle p {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+.life-cycle p:after {
+  content: ">>";
+  padding-left: 1rem;
+  font-size: 0.6rem;
+  font-weight: bold;
+}
+.life-cycle p:last-child:after {
+  content: none;
+  padding: 0;
 }
