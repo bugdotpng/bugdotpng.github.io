@@ -214,13 +214,10 @@ aside ul li ul li::before {
   }
 }
 .main .version {
-  display: block;
   font-size: 1.25rem;
-  font-style: italic;
   font-weight: bold;
   text-transform: uppercase;
   margin-bottom: 1rem;
-  margin-left: 1rem;
 }
 .main .cvrs {
   display: block;
