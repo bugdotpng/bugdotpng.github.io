@@ -105,6 +105,10 @@ a.back:before {
   padding-right: 0.3rem;
 }
 
+.main {
+  background: #ffffff;
+  padding: 3rem 2rem;
+}
 .main hr {
   height: 1px;
   border: none;
@@ -118,22 +122,16 @@ a.back:before {
 .main .container {
   max-width: 800px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 3rem;
   box-sizing: border-box;
-  border: solid #d1d1d1 1px;
-  border-radius: 11px;
-  margin-top: 1rem;
-}
-@media (max-width: 767px) {
-  .main .container {
-    padding: 1rem;
-    margin: 1rem;
-  }
+  background: #ffffff;
+  box-shadow: 0 0 30px #d1d1d1;
+  border-radius: 2rem;
 }
 .main .container h1 {
-  border-bottom: dotted 1px #a7a7a7;
+  border-bottom: dotted 1px #717171;
   margin-bottom: 1rem;
-  padding-bottom: 0.5rem;
+  padding-bottom: 1rem;
   font-size: 3rem;
   font-weight: 900;
   color: #222222;
@@ -160,6 +158,7 @@ a.back:before {
   padding-left: 0.5rem;
   margin-bottom: 1rem;
   border-left: solid #d1d1d1 3px;
+  margin-top: 1rem;
 }
 .main .container ul li {
   margin: 0;
@@ -190,5 +189,28 @@ a.back:before {
 .main .end {
   text-align: center;
   font-style: italic;
-  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+.main .end p.chapters {
+  justify-content: flex-end;
+}
+.main .end p.chapters.latest {
+  justify-content: flex-start;
+}
+.main .end ul.chapters {
+  justify-content: space-between;
+}
+.main .end .chapters {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  margin-top: 1rem;
+}
+.main .end .chapters .previous::before {
+  content: "←";
+  margin-right: 0.5rem;
+}
+.main .end .chapters .next::after {
+  content: "→";
+  margin-left: 0.5rem;
 }
