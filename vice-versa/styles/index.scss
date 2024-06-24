@@ -149,6 +149,9 @@ a {
 .main {
     background:$white;
     padding:3rem 2rem;
+    @include respond-to('small') {
+        padding:0;
+    }
     hr {
         height:1px;
         border:none;
@@ -168,6 +171,12 @@ a {
         background:$white;
         box-shadow: 0 0 30px $gray-300;
         border-radius:2rem;
+        @include respond-to('small') {
+            box-shadow:none;
+            border-radius:0;
+            border-bottom:dotted $gray-400 1px;
+            padding:1.5rem;
+        }
 
         h1 {
             border-bottom:dotted 1px $gray-500;
@@ -176,6 +185,11 @@ a {
             font-size:3rem;
             font-weight:900;
             color:#222222;
+            .superhead {
+                display:block;
+                font-size:1.5rem;
+                color:$gray-700;
+            }
         }
         h2 {
             color:#3e3e3e;
@@ -210,6 +224,57 @@ a {
                     margin-bottom:0;
                 }
             }
+            
+        &.toc {
+            border-left:solid $gold 2px;
+            padding:1rem;
+            li.major {
+                position:relative;
+                &::before {
+                    width:.75rem;
+                    height:.75rem;
+                    content:"";
+                    display:block;
+                    background:$gold;
+                    border-radius:50%;
+                    position:absolute;
+                    margin-left:-1.45rem;
+                }
+                ul {
+                    margin-top:.5rem;
+                    margin-bottom:0;
+                    padding: 1rem 0 0 0;
+                    border-left:solid $gray-400 1px;
+                    li.patch {
+                        display:flex;
+                        align-items:center;
+                        gap:.5rem;
+                        &::before {
+                            content:"";
+                            display:block;
+                            width:50px;
+                            height:1px;
+                            border-top:dotted $gray-400 2px;
+                        }
+                    }
+                    li.minor {
+                        display:flex;
+                        align-items:center;
+                        gap:.5rem;
+                        margin-left:calc(-.25rem - 1px);
+                        &::before {
+                            content:"";
+                            display:block;
+                            width:.5rem;
+                            height:.5rem;
+                            background:$white;
+                            border:solid $gray-400 1px;
+                            border-radius:50%;
+                        }
+                    }
+                }
+            }
+        }
         }
     }
     .divider {
@@ -232,6 +297,10 @@ a {
         text-align:center;
         font-style:italic;
         margin-top:2rem;
+        @include respond-to('small') {
+            padding:1.5rem;
+            padding-top:0;
+        }
         p.chapters {
             justify-content:flex-end;
             &.latest {

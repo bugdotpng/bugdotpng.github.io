@@ -109,6 +109,11 @@ a.back:before {
   background: #ffffff;
   padding: 3rem 2rem;
 }
+@media (max-width: 767px) {
+  .main {
+    padding: 0;
+  }
+}
 .main hr {
   height: 1px;
   border: none;
@@ -128,6 +133,14 @@ a.back:before {
   box-shadow: 0 0 30px #d1d1d1;
   border-radius: 2rem;
 }
+@media (max-width: 767px) {
+  .main .container {
+    box-shadow: none;
+    border-radius: 0;
+    border-bottom: dotted #a7a7a7 1px;
+    padding: 1.5rem;
+  }
+}
 .main .container h1 {
   border-bottom: dotted 1px #717171;
   margin-bottom: 1rem;
@@ -135,6 +148,11 @@ a.back:before {
   font-size: 3rem;
   font-weight: 900;
   color: #222222;
+}
+.main .container h1 .superhead {
+  display: block;
+  font-size: 1.5rem;
+  color: #3e3e3e;
 }
 .main .container h2 {
   color: #3e3e3e;
@@ -169,6 +187,56 @@ a.back:before {
   border-bottom: none;
   margin-bottom: 0;
 }
+.main .container ul.toc {
+  border-left: solid #E9C46A 2px;
+  padding: 1rem;
+}
+.main .container ul.toc li.major {
+  position: relative;
+}
+.main .container ul.toc li.major::before {
+  width: 0.75rem;
+  height: 0.75rem;
+  content: "";
+  display: block;
+  background: #E9C46A;
+  border-radius: 50%;
+  position: absolute;
+  margin-left: -1.45rem;
+}
+.main .container ul.toc li.major ul {
+  margin-top: 0.5rem;
+  margin-bottom: 0;
+  padding: 1rem 0 0 0;
+  border-left: solid #a7a7a7 1px;
+}
+.main .container ul.toc li.major ul li.patch {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.main .container ul.toc li.major ul li.patch::before {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 1px;
+  border-top: dotted #a7a7a7 2px;
+}
+.main .container ul.toc li.major ul li.minor {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-left: calc(-0.25rem - 1px);
+}
+.main .container ul.toc li.major ul li.minor::before {
+  content: "";
+  display: block;
+  width: 0.5rem;
+  height: 0.5rem;
+  background: #ffffff;
+  border: solid #a7a7a7 1px;
+  border-radius: 50%;
+}
 .main .divider {
   width: 100%;
   display: flex;
@@ -189,6 +257,12 @@ a.back:before {
   text-align: center;
   font-style: italic;
   margin-top: 2rem;
+}
+@media (max-width: 767px) {
+  .main .end {
+    padding: 1.5rem;
+    padding-top: 0;
+  }
 }
 .main .end p.chapters {
   justify-content: flex-end;
