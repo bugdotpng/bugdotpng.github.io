@@ -155,7 +155,7 @@ a.back:before {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  padding-left: 0.5rem;
+  padding: 0.5rem;
   margin-bottom: 1rem;
   border-left: solid #d1d1d1 3px;
   margin-top: 1rem;
@@ -163,7 +163,6 @@ a.back:before {
 .main .container ul li {
   margin: 0;
   padding: 0;
-  border-bottom: dotted #d1d1d1 1px;
   margin-bottom: 1rem;
 }
 .main .container ul li:last-child, .main .container ul li:only-child {
