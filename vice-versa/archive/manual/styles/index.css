@@ -409,6 +409,9 @@ main {
   border: solid #E76F51 1px;
   color: #E76F51;
 }
+.main .threats {
+  margin-bottom: 1.5rem;
+}
 .main .threats ul li {
   margin-bottom: 1.5rem;
   display: flex;
@@ -647,6 +650,10 @@ figure.thumb figcaption {
   padding-left: 0.8rem;
   border: solid #a7a7a7 1px;
   border-left: solid #a7a7a7 0.3rem;
+}
+figure.thumb--right {
+  max-width: 450px;
+  float: right;
 }
 
 .phases {

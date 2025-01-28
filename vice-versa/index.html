@@ -7,40 +7,73 @@
     <title>Vice Versa</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alumni+Sans:ital,wght@0,100..900;1,100..900&family=Azeret+Mono:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/index.css" type="text/css">
   </head>
   <body>
     <header>
+        <div aria-label="Skip Navigation" role="navigation">
+            <a href="#main-content" class="skip-nav">Skip to Main Content</a>
+          </div>
+          <nav class="condensed-nav" aria-label="">
+            <div class="condensed-nav__wrapper">
+              <span class="site-title"><a href="../index.html">Bugdotpng</a></span>
+            </div>
+          </nav>
+          <nav class="main-nav main-nav--alt" aria-label="">
+            <div class="main-nav__wrapper">
+              <span class="site-title"><a href="./index.html">Vice Versa</a></span>
+              <ol class="link-list link-list--inline">
+                <li><a href="./toc.html">Table of Contents</a></li>
+                <li><a href="./gallery.html">Art Gallery</a></li>
+              </ol>
+            </div>
+          </nav>
     </header>
     <main>
-    <section class="main">
-        <div class="container">
-        <h1>Vice Versa</h1>
-        <p>Danny is a depressed gas station cashier who truly, despite the cliche nature of it, just wants to live a normal life. But in a world infested with creatures called "Vices", this is far from a simple thing to achieve&mdash;especially when he has one of his own.</p>
-        <p>With the help of his good friends Gen and Rami, he has learned how to lead a relatively uneventful life, but the growing feeling of unease has been getting harder to ignore. And when the raging spitfire Emory becomes a more sustained force in his life, he can feel himself on the edge of a breakdown.</p>
-        <p>But, as Danny would say if he liked to give pithy aphorisms, you can't make an omelete without breaking a few eggs.</p>
-        <h2>Table of Contents</h2>
-        <ul class="toc">
-            <li class="major"><a href="chapters/1-0-0.html">1.0.0 : The Branch</a>
-                <ul>
-                    <li class="patch"><a href="chapters/1-0-1.html">1.0.1 : Ticking</a></li>
-                    <li class="minor"><a href="chapters/1-1-0.html">1.1.0 : Arrangements</a></li>
-                </ul>
-            </li>
-        </ul>
-        <hr>
-        <h2>Auxilliary Readings</h2>
-        <ul>
-            <li><a href="manual/index.html">The Diagnostic Manual of Vicemortiferum - v3 (WIP)</a></li>
-        </ul>
-    </div>
-    </section>
-
-</main>
-    <footer>
-
+        <div class="header">
+          <div class="header__content">
+            <span class="superhead">Project</span>
+            <h1 class="page-title" id="main">Vice Versa <span class="divider divider--dark-gray">//////</span></h1>
+            <p class="page-description">Danny is a depressed convenience store cashier who truly just wants to live a normal life. But in a world infested with the parasitic creatures known as Vices, this is far from a simple thing to achieve&mdash;especially when he has one of his own. With the help of his good friends Gen and Rami, he has learned how to lead a relatively uneventful life, but the growing feeling of unease has been getting harder to ignore. And when the raging spitfire Emory becomes a more sustained force in his life, he can feel himself on the edge of a breakdown.</p>
+          </div>
+        </div>
+        <div class="wrapper">
+          <div class="main-content">
+            <section class="section">
+              <div class="card-group card-group--inline">
+                <div class="card-group__wrapper">
+                  <div class="card card--inline">
+                    <img src="https://images.unsplash.com/photo-1471107340929-a87cd0f5b5f3" alt="a fountain pen sitting on a blank notebook">
+                    <div class="card__content">
+                      <div class="heading-group heading-group--card">
+                        <h2>Table of Contents</h2>
+                      </div>
+                      <p>Begin reading at chapter one or pick up where you left off. Vice Versa does not have a regular update schedule, but you can follow me @bug-ocs on tumblr to stay up to date.</p>
+                      <a href="./toc.html" class="link">Table of Contents</a>
+                    </div>
+                  </div>
+                  <div class="card card--inline">
+                    <img src="https://64.media.tumblr.com/79741f981f2c07be4583f218e23df26b/2dc787d41d5cb970-9b/s2048x3072/b43d6a006be63a18de4c3e361d6edc9f5b268fe3.jpg" alt="a digital illustration of emory jumping from the side; a panel to the left shows them smiling with a peace sign held to their head.">
+                    <div class="card__content">
+                      <div class="heading-group heading-group--card">
+                        <h2>Art Gallery</h2>
+                      </div>
+                      <p>A collection of art for Vice Versa that I've done over the years. Some concepts are outdated, but I still like to show older art, because it shows where I've come from! You can see more of my art @bugsnart on tumblr.</p>
+                      <a href="./gallery.html" class="link">Art Gallery</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </main>
+      <footer>
+        <div class="compliance">
+            <p>&copy; <script>document.write(new Date().getFullYear())</script> <a href="https://bugdotpng.tumblr.com">bugdotpng.tumblr.com</a></p>
+            <p>Do not use, copy, or distribute content including text, images and code without express permission from me. Email me at <a href="mailto:bugdotinfo@gmail.com">bugdotinfo@gmail.com</a> with any questions.</p>
+        </div>
     </footer>
 </body>
 </html>
