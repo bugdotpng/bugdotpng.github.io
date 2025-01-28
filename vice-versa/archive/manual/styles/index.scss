@@ -467,6 +467,7 @@ main {
         }
     }
     .threats {
+        margin-bottom:1.5rem;
         ul {
             li {
                 margin-bottom:1.5rem;
@@ -714,6 +715,10 @@ figure.thumb {
         padding-left:.8rem;
         border:solid $gray-400 1px;
         border-left:solid $gray-400 .3rem;
+    }
+    &--right {
+        max-width:450px;
+        float:right;
     }
 }
 
