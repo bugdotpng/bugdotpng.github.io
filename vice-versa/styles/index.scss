@@ -525,13 +525,15 @@ ol {
     margin:0;
     display:flex;
     align-items:center;
-    gap:1rem;
+    gap:.5rem;
+    flex-wrap:wrap;
     li {
+      margin-bottom:0;
       &::after {
         content:"|";
         color:$gray300;
         font-weight:bold;
-        margin-left:1rem;
+        margin-left:.5rem;
       }
       &:first-child {
         &::before {
@@ -831,6 +833,9 @@ position: static;
     p {
         font-size:1.25rem;
         font-family:$work;
+        @media screen and (max-width:500px) {
+          font-size:1.1rem;
+        }
     }
     .chapter-footer {
         display:flex;
@@ -926,6 +931,9 @@ position: static;
     padding:3rem 1.5rem;
       max-width:1200px;
       margin:0 auto;
+      @media screen and (max-width:600px) {
+        padding:1.5rem;
+      }
     .header__nav, .header__content {
       display:flex;
       width:100%;
@@ -941,10 +949,6 @@ position: static;
       @media screen and (max-width:600px) {
         flex-direction:column;
         align-items:flex-start;
-      }
-      @media screen and (max-width:400px) {
-        display:none;
-        visibility:hidden;
       }
     }
     .header__content {
@@ -976,6 +980,7 @@ position: static;
     align-items:center;
     .previous {
       &::before {
+        display:inline-block;
         content:'\f060';
         font-family:$fa;
         margin-right:.5rem;
@@ -983,6 +988,7 @@ position: static;
     }
     .next {
       &::after {
+        display:inline-block;
         content:'\f061';
         font-family:$fa;
         margin-left:.5rem;
