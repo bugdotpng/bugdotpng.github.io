@@ -170,8 +170,15 @@ h6 {
   font-style: italic;
 }
 
-p::selection, blockquote::selection, li::selection, span::selection, a::selection, h1::selection, h2::selection, .heading-group--card h3::selection, h3::selection, h4::selection, h5::selection, h6::selection, dd::selection, dt::selection {
+p::selection, blockquote::selection, li::selection, span::selection, a::selection, h1::selection, h2::selection, .heading-group--card h3::selection, h3::selection, h4::selection, h5::selection, h6::selection, dd::selection, dt::selection, em::selection, strong::selection {
   background: #EEAE38;
+}
+
+.word-count {
+  font-size: 0.9rem;
+  font-family: "Azeret Mono", monospace;
+  color: rgba(0, 0, 0, 0.6);
+  font-style: italic;
 }
 
 blockquote {
