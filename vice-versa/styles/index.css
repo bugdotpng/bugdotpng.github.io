@@ -59,39 +59,39 @@ table {
 }
 
 .mt-0 {
-  margin-top: 0;
+  margin-top: 0 !important;
 }
 
 .mt-sm {
-  margin-top: 1rem;
+  margin-top: 1rem !important;
 }
 
 .mt-md {
-  margin-top: 2rem;
+  margin-top: 2rem !important;
 }
 
 .mt-lg {
-  margin-top: 3rem;
+  margin-top: 3rem !important;
 }
 
 .mb-0 {
-  margin-bottom: 0;
+  margin-bottom: 0 !important;
 }
 
 .mb-sm {
-  margin-bottom: 1rem;
+  margin-bottom: 1rem !important;
 }
 
 .mb-md {
-  margin-bottom: 2rem;
+  margin-bottom: 2rem !important;
 }
 
 .mb-lg {
-  margin-bottom: 3rem;
+  margin-bottom: 3rem !important;
 }
 
 .img-border {
-  border: solid #d1d1d1 2px;
+  border: solid #d1d1d1 2px !important;
 }
 
 strong {
@@ -999,13 +999,19 @@ details summary {
   }
 }
 .custom-content .prod {
-  display: grid;
-  grid-template-columns: 33.33% 66.66%;
+  display: flex;
   width: 100%;
   gap: 1.5rem;
   margin: 3rem 0;
+  box-sizing: border-box;
+}
+@media screen and (max-width: 500px) {
+  .custom-content .prod {
+    flex-direction: column;
+  }
 }
 .custom-content .prod .corporeal {
+  width: 33.33%;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
@@ -1020,6 +1026,48 @@ details summary {
   font-size: 0.95rem;
   position: sticky;
   top: 1rem;
+}
+@media screen and (max-width: 500px) {
+  .custom-content .prod .corporeal {
+    width: 100%;
+    top: 0;
+    position: sticky;
+    background: #ffffff;
+    border-right: none;
+    border-bottom: dashed #d1d1d1 2px;
+    padding: 1rem;
+  }
+  .custom-content .prod .corporeal p {
+    text-align: center;
+  }
+}
+.custom-content .prod .metaphysical {
+  width: 66.66%;
+}
+@media screen and (max-width: 500px) {
+  .custom-content .prod .metaphysical {
+    width: 100%;
+  }
+}
+.custom-content .status {
+  padding: 1rem;
+  border: solid #a7a7a7 2px;
+  border-radius: 8px;
+  background: #eaeaea;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.custom-content .status p {
+  font-family: "Azeret Mono", monospace;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  color: #3e3e3e;
+}
+.custom-content .status p::before {
+  content: "<! -- ";
+}
+.custom-content .status p::after {
+  content: " -- >";
 }
 .custom-content .chapter-footer {
   display: flex;
