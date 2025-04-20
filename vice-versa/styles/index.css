@@ -219,6 +219,10 @@ blockquote {
   border-left: solid #d1d1d1 6px;
   padding: 0.5rem 1.5rem;
   font-style: italic;
+  margin-bottom: 1rem;
+}
+blockquote:last-child {
+  margin-bottom: 0;
 }
 
 .superhead, .subhead {
@@ -254,6 +258,10 @@ blockquote {
 .label--dark-gray {
   border-color: #3e3e3e;
   color: #3e3e3e;
+}
+.label--mid-gray {
+  border-color: rgba(0, 0, 0, 0.5);
+  color: rgba(0, 0, 0, 0.5);
 }
 .label--light-gray {
   border-color: #a7a7a7;
@@ -481,17 +489,17 @@ ul.inline li:last-child::after, ol.inline li:last-child::after {
   padding: 1.5rem;
   margin-bottom: 1rem;
 }
-.interview .adjunct-interjection, .interview .agent-interjection {
+.interview .interjection {
   margin-bottom: 1.5rem;
   border-bottom: solid #eaeaea 2px;
   padding-bottom: 1.5rem;
 }
-.interview .adjunct-interjection p, .interview .agent-interjection p {
+.interview .interjection p {
   font-family: "Azeret Mono", monospace;
   font-size: 0.8rem;
   color: #3e3e3e;
 }
-.interview .adjunct-interjection p strong, .interview .agent-interjection p strong {
+.interview .interjection p strong {
   display: block;
   text-transform: uppercase;
 }
@@ -506,6 +514,12 @@ ul.inline li:last-child::after, ol.inline li:last-child::after {
 }
 .interview .interview__question p:first-of-type, .interview .interview__answer p:first-of-type {
   margin-top: 0.4rem;
+}
+.interview .interview__question p .old, .interview .interview__answer p .old {
+  color: rgba(0, 0, 0, 0.5);
+}
+.interview .interview__question p .old .addendum, .interview .interview__answer p .old .addendum {
+  color: rgba(0, 0, 0, 0.5);
 }
 .interview .interview__question {
   margin-bottom: 0.75rem;
@@ -1411,6 +1425,18 @@ h2.has-label, h3.has-label {
 }
 .custom-content .status p::after {
   content: " -- >";
+}
+.custom-content .status--interview {
+  padding: 0.5rem;
+  border: none;
+  background: none;
+  letter-spacing: 0.2rem;
+  border-bottom: solid #eaeaea 2px;
+  padding-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.custom-content .status--interview p {
+  color: rgba(0, 0, 0, 0.5);
 }
 .custom-content .chapter-footer {
   display: flex;
