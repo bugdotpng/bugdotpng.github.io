@@ -1,0 +1,136 @@
+/* FONTS */
+$work: "Work Sans", Arial, sans-serif;
+$mono: "Azeret Mono", monospace;
+$open: "Open Sans", Arial, sans-serif;
+$fa: "Font Awesome 6 Free";
+/* COLORS */
+$white: #ffffff;
+$gray100: #f6f6f6;
+$gray200: #eaeaea;
+$gray300: #d1d1d1;
+$gray400: #a7a7a7;
+$gray500: rgba(0,0,0,0.5);
+$gray700: #535353;
+$gray800: #3e3e3e;
+$gray900: #202020;
+$black: #000000;
+
+$bg-red: #E33E4E;
+$bg-yellow: #EEAE38;
+$bg-green: #70CC54;
+$bg-blue: #4CBAEA;
+$bg-purple: #C650F5;
+
+$text-red: #C6192A;
+$text-gold: #B35900;
+$text-green: #0F8521;
+$text-blue: #166EA5;
+$text-purple: #951AC6;
+
+$highlighter: #fae396;
+
+$link: $text-blue;
+$link-hover: $text-purple;
+$link-on-dark: #72BBE9;
+$link-on-dark-hover: #D595EE;
+
+
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+// UTILITY CLASSES
+.mt-0 {
+    margin-top:0 !important;
+}
+.mt-xs {
+  margin-top:.5rem !important;
+}
+.mt-sm {
+    margin-top:1rem !important;
+}
+.mt-md {
+    margin-top:2rem !important;
+}
+.mt-lg {
+    margin-top:3rem !important;
+}
+.mb-0 {
+  margin-bottom:0 !important;
+}
+
+.mb-xs {
+  margin-bottom:.5rem !important;
+}
+.mb-sm {
+  margin-bottom:1rem !important;
+}
+.mb-md {
+  margin-bottom:2rem !important;
+}
+.mb-lg {
+  margin-bottom:3rem !important;
+}
+.img-border {
+  border:solid $gray300 2px !important;
+}
+.my-sm {
+  margin:.5rem 0 !important;
+}
+
+// BEGIN BASE STYLES
+strong {
+  font-weight:bold;
+}
+em {
+  font-style:italic;
+}
