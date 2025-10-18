@@ -1,22 +1,94 @@
-/* FONTS */
+@charset "UTF-8";
 /* COLORS */
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
 */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
   margin: 0;
   padding: 0;
   border: 0;
@@ -26,8 +98,17 @@ time, mark, audio, video {
 }
 
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
   display: block;
 }
 
@@ -35,16 +116,20 @@ body {
   line-height: 1;
 }
 
-ol, ul {
+ol,
+ul {
   list-style: none;
 }
 
-blockquote, q {
+blockquote,
+q {
   quotes: none;
 }
 
-blockquote:before, blockquote:after,
-q:before, q:after {
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
   content: "";
   content: none;
 }
@@ -54,62 +139,177 @@ table {
   border-spacing: 0;
 }
 
-* {
-  box-sizing: border-box;
+/* END RESET */
+body {
+  background: #eaeaea;
 }
 
-.mt-0 {
-  margin-top: 0 !important;
+header {
+  border-radius: 12px 12px 0 0;
+  max-width: 800px;
+  margin: 0 auto;
+  margin-top: 3rem;
+  background: #ffffff;
+  display: flex;
+  gap: 1.5rem;
+  justify-content: space-between;
+  font-family: "Azeret Mono", monospace;
+  font-size: 0.9rem;
+  align-items: center;
+  border-bottom: solid #000000 1px;
 }
-
-.mt-xs {
-  margin-top: 0.5rem !important;
+header p {
+  color: #000000;
 }
-
-.mt-sm {
-  margin-top: 1rem !important;
-}
-
-.mt-md {
-  margin-top: 2rem !important;
-}
-
-.mt-lg {
-  margin-top: 3rem !important;
-}
-
-.mb-0 {
-  margin-bottom: 0 !important;
-}
-
-.mb-xs {
-  margin-bottom: 0.5rem !important;
-}
-
-.mb-sm {
-  margin-bottom: 1rem !important;
-}
-
-.mb-md {
-  margin-bottom: 2rem !important;
-}
-
-.mb-lg {
-  margin-bottom: 3rem !important;
-}
-
-.img-border {
-  border: solid #d1d1d1 2px !important;
-}
-
-.my-sm {
-  margin: 0.5rem 0 !important;
-}
-
-strong {
+header p:first-child {
+  text-transform: uppercase;
+  letter-spacing: 2px;
   font-weight: bold;
 }
+header p:first-child .vice {
+  padding: 1rem 1.25rem 1rem 1rem;
+  display: inline-block;
+  background: #000000;
+  color: #ffffff;
+  border-radius: 12px 0 0 0;
+  clip-path: polygon(0% 0, 90% 0%, 100% 100%, 0 100%);
+}
+header a {
+  color: #0689b9;
+  padding: 1rem;
+  display: inline-block;
+  font-weight: 500;
+  transition: 0.2s ease;
+}
+header a:hover, header a:active, header a:focus {
+  text-decoration: none;
+  color: #ffffff;
+  background: #0689b9;
+}
+header a:last-child {
+  border-radius: 0 12px 0 0;
+}
 
-em {
+main .page-header {
+  max-width: 800px;
+  margin: 0 auto;
+  background: #ffffff;
+  padding: 3rem;
+  padding-bottom: 0;
+}
+main .page-header .page-title {
+  font-weight: 200;
+  font-size: 3rem;
+  font-family: "Azeret Mono", monospace;
+  text-transform: uppercase;
+  color: #1d2f4b;
+}
+main .page-header .page-title .superhead {
+  display: block;
+  font-size: 1.1rem;
+  font-weight: 300;
+  color: #0689b9;
+  margin-bottom: 0.25rem;
+}
+main .page-header .page-title::after {
+  content: "";
+  width: 1px;
+  border-right: dashed #d1d1d1 2px;
+  display: block;
+  height: 150px;
+  margin-top: 0.75rem;
+}
+main .content {
+  background: #ffffff;
+  padding: 3rem;
+  padding-top: 0.75rem;
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  font-family: "Noto Sans", sans-serif;
+}
+main .content .divider {
+  height: 9rem;
+  border: none;
+  width: 1px;
+  border-left: dashed #d1d1d1 2px;
+  margin: 1.5rem 0;
+}
+main .content blockquote {
+  margin-top: 3rem;
+}
+main .content blockquote::before {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 4px;
+  background: #99f2eb;
+  margin-bottom: 1.5rem;
+}
+main .content blockquote p {
+  font-family: "Azeret Mono", monospace;
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: #1d2f4b;
+  margin-bottom: 0;
+}
+main .content p {
+  margin-bottom: 0.75rem;
+}
+main .content p em {
   font-style: italic;
+}
+main .chapter-footer {
+  border-top: dashed #d1d1d1 2px;
+  padding-top: 3rem;
+  margin-top: 3rem;
+  display: flex;
+  font-family: "Azeret Mono", monospace;
+  font-size: 0.9rem;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+main .chapter-footer p {
+  font-style: italic;
+  margin-bottom: 0;
+}
+main .chapter-footer a {
+  color: #0689b9;
+  font-weight: bold;
+}
+main .chapter-footer a:hover, main .chapter-footer a:active, main .chapter-footer a:focus {
+  text-decoration: none;
+  color: #1d2f4b;
+}
+main .chapter-footer a::after {
+  display: inline-block;
+  content: "→";
+  margin-left: 0.5rem;
+  text-decoration: none;
+}
+
+footer {
+  text-align: center;
+  font-family: "Azeret Mono", monospace;
+  font-size: 0.9rem;
+  max-width: 750px;
+  margin: 3rem auto;
+}
+footer a {
+  color: #0689b9;
+  font-weight: bold;
+}
+footer a:hover, footer a:active, footer a:focus {
+  color: #1d2f4b;
+  text-decoration: none;
+}
+footer p {
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+}
+footer .top {
+  display: block;
+  color: #0689b9;
+  margin-bottom: 1.5rem;
 }

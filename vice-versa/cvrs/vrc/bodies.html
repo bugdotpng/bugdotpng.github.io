@@ -10,30 +10,44 @@
         <link href="https://fonts.googleapis.com/css2?family=Azeret+Mono:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital@0;1&family=Noto+Serif:ital,wdth,wght@0,62.5,100..900;1,62.5,100..900&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="../styles/index.css" type="text/css">
         <script src="https://kit.fontawesome.com/958a925dc2.js" crossorigin="anonymous"></script>
+        <script src="../js/index.js"></script>
     </head>
     <body>
         <header class="header">
         <div class="header__top header__top--on-dark">
+            <a href="./index.html" class="home">
             <div class="logo logo--horizontal">
-            <span class="nsh1">CVRS</span>
-            <span class="wordmark">Center for <strong>Vice Research & Support</strong></span>
+                <span class="nsh1">CVRS</span>
+                <span class="wordmark">Center for <strong>Vice Research & Support</strong></span>
             </div>
-            <nav class="header__nav" aria-label="Primary Navigation">
-            <ol>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Services, Treatments &amp; Support</a></li>
-                <li class="login"><a href="#">Log In</a></li>
-            </ol>
-            </nav>
+            </a>
+            <button onclick="menuToggle()" class="menu-toggle" id="menu-toggle">Menu <span class="menu-icon"><span></span></button>
         </div>
-        <div class="header__bottom">
-            <nav class="header__nav--secondary" aria-label="Secondary Navigation">
-            <ol>
-                <li><a href="#">Our Team</a></li>
-                <li><a href="#">Schedule a Consult</a></li>
-                <li><a href="#">Vice Research Compendium</a></li>
-            </ol>
+        </div>
+        <div class="header__bottom" id="menu-dropdown">
+            <nav aria-label="Primary Navigation">
+            <div class="col">
+                <span class="superhead">Quick Links</span>
+                <ol class="link-list">
+                <li><a href="../about/index.html">About Us</a></li>
+                <li><a href="../about/our-team/index.html">Our Team</a></li>
+                <li><a href="../about/our-mission.html">Mission Statement</a></li>
+                <li><a href="../about/careers/index.html">Careers</a></li>
+                </ol>
+            </div>
+            <div class="col">
+                <span class="superhead">Patient Resources</span>
+                <ol class="link-list">
+                <li><a href="../services/index.html">Services, Treatment &amp; Support</a></li>
+                <li><a href="../vrc/index.html">Vice Research Compendium</a></li>
+                <li><a href="../admission.html">Admission Guidance</a></li>
+                <li><a href="../login/index.html">Patient Login</a></li>
+                </ol>
+            </div>
+            <div class="info">
+                <span class="superhead">Contact Us</span>
+                <p>For more information, call us at (214) 877-8423 or send an email to <a href="mailto:info@cvrs.com">info@cvrs.com</a>.</p>
+            </div>
             </nav>
         </div>
         </header>
@@ -80,12 +94,17 @@
                     <details class="internal-nav">
                         <summary>On This Page</summary>
                         <ul class="link-list">
+                            <li><a href="#criteria">Infection Criteria</a></li>
                             <li><a href="#status">Host Status</a></li>
                             <li><a href="#blights">What are Blights?</a></li>
                             <li><a href="#av">AV and Patches</a></li>
                         </ul>
                     </details>
-                    <p>While infected with a Vice, our body is constantly fighting back to the best of its ability. The statuses outlined below give caregivers an idea of Vice activity and can inform treatment plans. Blights also play a role in signaling a Vice’s intentions and can warn Hosts of an advancing Vice. As a form of defense, many Hosts are able to summon large concentrations of AV, called a patch, that can be used to defend oneself or protect others. Establishing a patch is often the body’s way of warning the Host of sudden, drastic changes in a Vice’s makeup.</p>
+                    <p>The statuses outlined below give caregivers an idea of Vice activity and can inform treatment plans. Blights also play a role in signaling a Vice’s intentions and can warn Hosts of an advancing Vice. As a form of defense, many Hosts are able to summon large concentrations of AV, called a patch, that can be used to defend oneself or protect others. Establishing a patch is often the body’s way of warning the Host of sudden, drastic changes in a Vice’s makeup.</p>
+                    <h2 id="criteria">Infection Criteria</h2>
+                    <p>Vices can be contracted at any age, though most people contract their first Vice between the ages of 15 and 25. Hosts as young as 4 and as old as 93 have been documented as contracting a Vice. While age does not necessarily impact classification, some classifications are less likely to be found in younger Hosts, such as <a href="./classes/lambda.html">Lambda Vices</a>.</p>
+                    <p>The criteria for contracting a Vice cannot be simplified into an easily-digestible list. Any and all people are technically capable of contracting a Vice, though some have an increased risk. Those with weaker immune systems and people who have experienced recent or repeated trauma are at higher risk.</p>
+                    <p>People are also able to contract multiple Vices throughout their life, having an increased risk if any of their previous Vices had a sudden advent or the <a href="./classes/phi.html">Phi classification</a>. Due to the complexity of Vices with a gradual advent, it is believed that the Host’s body has adapted to use a more well-rounded defense strategy and is better equipped to detect the vague physiological factors that result in a gradual advent.</p>
                     <h2 id="status">Host Status</h2>
                     <p>Hosts have a variety of statuses that communicate urgency and drive treatment plans. While a Host is infected, they can further be categorized by the degree that the Vice has spread within their body.</p>
                     <figure class="captioned-media">
@@ -237,7 +256,7 @@
             </ul>
             <ul class="link-list">
                 <li><a href="#">Services, Treatments &amp; Support</a></li>
-                <li><a href="#">Schedule a Consult</a></li>
+                <li><a href="#">Admission Guidance</a></li>
                 <li><a href="#">Vice Research Compendium</a></li>
             </ul>
             <div class="contact">

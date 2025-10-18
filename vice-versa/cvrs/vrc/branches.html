@@ -10,30 +10,44 @@
         <link href="https://fonts.googleapis.com/css2?family=Azeret+Mono:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital@0;1&family=Noto+Serif:ital,wdth,wght@0,62.5,100..900;1,62.5,100..900&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="../styles/index.css" type="text/css">
         <script src="https://kit.fontawesome.com/958a925dc2.js" crossorigin="anonymous"></script>
+        <script src="../js/index.js"></script>
     </head>
     <body>
         <header class="header">
         <div class="header__top header__top--on-dark">
+            <a href="./index.html" class="home">
             <div class="logo logo--horizontal">
-            <span class="nsh1">CVRS</span>
-            <span class="wordmark">Center for <strong>Vice Research & Support</strong></span>
+                <span class="nsh1">CVRS</span>
+                <span class="wordmark">Center for <strong>Vice Research & Support</strong></span>
             </div>
-            <nav class="header__nav" aria-label="Primary Navigation">
-            <ol>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Services, Treatments &amp; Support</a></li>
-                <li class="login"><a href="#">Log In</a></li>
-            </ol>
-            </nav>
+            </a>
+            <button onclick="menuToggle()" class="menu-toggle" id="menu-toggle">Menu <span class="menu-icon"><span></span></button>
         </div>
-        <div class="header__bottom">
-            <nav class="header__nav--secondary" aria-label="Secondary Navigation">
-            <ol>
-                <li><a href="#">Our Team</a></li>
-                <li><a href="#">Schedule a Consult</a></li>
-                <li><a href="#">Vice Research Compendium</a></li>
-            </ol>
+        </div>
+        <div class="header__bottom" id="menu-dropdown">
+            <nav aria-label="Primary Navigation">
+            <div class="col">
+                <span class="superhead">Quick Links</span>
+                <ol class="link-list">
+                <li><a href="../about/index.html">About Us</a></li>
+                <li><a href="../about/our-team/index.html">Our Team</a></li>
+                <li><a href="../about/our-mission.html">Mission Statement</a></li>
+                <li><a href="../about/careers/index.html">Careers</a></li>
+                </ol>
+            </div>
+            <div class="col">
+                <span class="superhead">Patient Resources</span>
+                <ol class="link-list">
+                <li><a href="../services/index.html">Services, Treatment &amp; Support</a></li>
+                <li><a href="../vrc/index.html">Vice Research Compendium</a></li>
+                <li><a href="../admission.html">Admission Guidance</a></li>
+                <li><a href="../login/index.html">Patient Login</a></li>
+                </ol>
+            </div>
+            <div class="info">
+                <span class="superhead">Contact Us</span>
+                <p>For more information, call us at (214) 877-8423 or send an email to <a href="mailto:info@cvrs.com">info@cvrs.com</a>.</p>
+            </div>
             </nav>
         </div>
         </header>
@@ -151,8 +165,10 @@
                                 <p>Branches are not addressed in the corporeal realm, except in the extreme circumstances of manual rescission, an experimental rescission method that should only be performed as a last resort. Learn more about the different types of rescission under <a href="#options">Branch Options</a> below or as a <a href="#">service</a> provided by a Vice Management Specialist.</p>
                                 <h4 id="metaphysical">The Metaphysical Realm (Branch Arena)</h4>
                                 <p>Production officially begins once the Host is admitted to the Branch Arena, where the majority of action takes place. Adjuncts are admitted to the Branch Arena in the same order they were added to the queue during staging, with a 1:8 ratio for wait times. That is to say, if an Adjunct joined the queue 15 seconds into staging, they would be admitted roughly 2 minutes after the Host is admitted to the Branch Arena.</p>
-                                <p>Everyone experiences this intangible realm differently, but many have likened being in the Branch Arena to lucid dreaming or astral projecting. Those who have spent less time in this realm have difficulty orienting oneself, though it comes more naturally over time. While research is still being conducted, this environment is believed to be the “side effect” of having the body being overrun with VG, and the shared contact is what enables the “shared hallucination” to occur between those present for the Branch. The mechanics of the metaphysical realm continue to be a hot research topic and are continually documented by the <a href="#">Observation team</a> as well as agents present in the arena.</p>
-                                <p>This arena is typically constructed to mimic the properties of the environment around the Host during advent. Sudden advents tend to result in smaller, less complex arenas, while gradual advents can create complex, physics-defying arenas with multiple “stages”, all tied together by incomprehensible corridors and tunnels. The five senses can and are often aroused within the arena, with Hosts and Adjuncts able to recall sounds, smells, and even tastes after a Branch has passed. This environment typically does not change throughout a Vice’s life cycle, but it may increase in complexity and expand to include a larger area or a different room, for example. Some intelligent Vices are capable of completely changing this environment between Branches, but this is incredibly rare overall.</p>
+                                <p>Everyone experiences this intangible realm differently, but many have likened being in the Branch Arena to lucid dreaming or astral projecting. Those who have spent less time in this realm have difficulty orienting themselves, though it comes more naturally over time. While research is still being conducted, this environment is believed to be the “side effect” of having the body being overrun with VG, and the shared contact is what enables the “shared hallucination” to occur between those present for the Branch. The mechanics of the metaphysical realm continue to be a hot research topic and are continually documented by the <a href="#">Observation team</a> as well as agents present in the arena.</p>
+                                <p>This arena typically mimics the properties of the environment around the Host during advent. Arenas vary greatly in size, ranging anywhere from the size of a standard room to multi-acre fields. The smaller arenas of Vices with a sudden advent tend to have sharper details with a focus on objects, while the larger arenas of Vices with a gradual advent tend to be less detailed, with an emphasis on feelings, sensations, and disorienting architecture. Mature Vices with high threat levels can sometimes accomplish both, creating complex, escheresque environments with strikingly realistic details.</p>
+                                <p>The five senses can and are often aroused within the arena, with Hosts and Adjuncts able to recall sounds, smells, and even tastes after a Branch has passed. This environment typically does not change throughout a Vice’s life cycle, but it may increase in complexity and expand to include a larger area or a different room, for example. Some intelligent Vices are capable of completely changing this environment between Branches, but this is incredibly rare overall.</p>
+                                <p>Vices with a higher threat level often use psychological tactics to further dissuade action by projecting visages of people from the Host’s life. These projections typically pull from the Host’s memories and are used to discourage or distract the Host from acting promptly, triggering strong emotions or psychologically trapping them in past scenarios. When observed closely, these projections can be somewhat unsettling. They are often likened to images generated by young neural nets, resulting in uncanny reconstructions that feel off in a way that can excite our fight or flight response. These projections can and will react to speech or touch, but typically in incoherent or uncharacteristic ways. These projections cannot physically harm the extensions of the Host or Adjuncts.</p>
                                 <p>Another facet of a Vice’s Branch Policy is its exhibition, a visage only seen and deployed in the Branch Arena. Its purpose is to both intimidate the Host and protect its core from attacks, which the visage is constructed around.In the Branch Arena, exhibitions can be as small as a house cat or span as much as 5 times taller than the average human. A Vice’s exhibition tends to remain largely unchanged throughout its life cycle, though a select few have been observed to alter their characteristics between Branches. Some suspect that core placement in the body can mimic core placement in the Vice’s exhibition; though, this has not been substantiated and is a massive generalization, as many exhibitions do not share our anatomy.</p>
                                 <p>Exhibitions most commonly mimic animals—spanning the breadth of the animal kingdom from mammals to reptiles to insects and everything in between—often preying on our innate fear of predators or even personal phobias. Less commonly, exhibitions extend beyond our zoological roster and present as amalgamations of multiple animals and can even mimic those found in science fiction and horror films. A Vice’s threat level typically informs the complexity and novelty of its exhibition. Learn more about exhibitions below in <a href="#exhibitions">Exploring Exhibitions</a>.</p>
                                 <p>Within the Branch Arena, patches can be summoned to fight the exhibition and threaten or destroy the Vice core. The form that patches take in production are more concrete and stable than the patches summoned during staging. If a patch is summoned during staging and the wielder is brought in as an Adjunct, the patch will already be active once they enter the Branch Arena. Learn more about using patches in the Branch Arena in <a href="#options">Branch Options</a> below, or learn about the process of establishing one in <a href="./bodies.html#av">AV and Patches</a>.</p>
@@ -164,32 +180,23 @@
                     </section>
                     <h2 id="policies">Branch Policies</h2>
                     <p>Every Vice has a set of relatively static data that influences Branches, known collectively as the Branch Policy. This data is typically established at advent and tends to remain generally the same throughout a Vice’s life cycle. Some classifications--specifically <a href="./classes/delta.html">Delta</a> and <a href="./classes/epsilon.html">Epsilon</a> Vices--are able to intentionally change these properties as a defense mechanism or to catch the Host by surprise. Each subset of data is further outlined below.</p>
-                    <dl class="desc-list">
-                        <dt>Environmental Branch Trigger(s)</dt>
-                        <dd>This set of information is established at advent and is referenced during the Quality Assurance Check (QAC) before a Branch. If the current properties of the Host’s environment match at minimum three of the properties found at advent, the Vice will proceed with Branch initiation. Examples of these properties most commonly include sounds and smells, but can even include temperature and the amount of natural light. Learn more about QACs in <a href="#qac">Phase 0: Quality Assurance Check</a>.</dd>
-                        <dt>Branch Arena Blueprint</dt>
-                        <dd>
-                            <p>As discussed in <a href="#metaphysical">The Metaphysical Realm</a>, the layout of the Branch Arena typically pulls inspiration from the environment around the Host at advent. Some classifications are capable of constructing novel blueprints to better suit their exhibition, but this is only observed in extremely intelligent Vices with a higher threat level--such as <a href="./classes/omega.html">Omega</a> and <a href="./classes/epsilon.html">Epsilon</a> Vices.</p>
-                            <p>Some details of the Branch Arena are less detailed or difficult to parse when observed directly, much like the details of a dream. The overall blueprint of the Branch Arena stays roughly the same throughout a Vice’s life cycle, but can and often does increase in complexity as the Vice matures, though this enhancement often increases the energy output of a Branch.</p>
-                        </dd>
-                        <dt>Exhibition Presentation</dt>
-                        <dd>
-                            <p>Only present in the Branch Arena, a Vice's exhibition shields the vulnerable core from the Host, Adjuncts and their patches. Exhibitions typically take the form of predatory animals—though the possibilities are endless. Some exhibitions are comprised of the properties present at advent, typically textures, smells or sounds and can even draw from the innate fears of the Host. The characteristics of the exhibition are also influenced by its attack strategy, and vice versa, an example being how defensive exhibitions typically have a thicker skin or protective outer shell.</p>
-                            <p>Exhibitions are incredibly unique and vary greatly between Hosts, but tend to stay roughly the same throughout a Vice’s life cycle. As with the Branch Arena blueprint, a Vice’s exhibition can increase in complexity as the Vice matures. Exhibitions can be classified by size, and tend to stay in the same size grouping, even as complexity increases. Learn more about exhibitions in <a href="#exhibitions">Exploring Exhibitions</a> below.</p>
-                        </dd>
-                        <dt>Exhibition Attack Strategy</dt>
-                        <dd>
-                            <p>This data set is relatively broad and refers to a Vice’s M.O., that is, how the Vice interacts with the Host and Adjuncts within the Branch Arena. This attack strategy informs how the exhibition is classified, as offensive, defensive, hasty, or balanced. A Vice’s attack strategy is not directly tied to its classification, thought most classes tend to see higher concentrations of specific exhibition attack strategies. For example, <a href="./classes.theta.html">Theta Vices</a> Vices typically have hasty exhibitions while <a href="./classes/zeta.html">Zeta Vices</a> almost exclusively have defensive exhibitions.</p>
-                            <p>Attack strategy also refers to the literal plan of attack once the Branch moves into production. This data is extremely broad, as every exhibition is different, but includes preferences such as which extensions the exhibition targets and how the exhibition interacts with the Branch Arena--if it uses objects or hides behind them. These preferences also include the core reactivity or how much damage the core allows before terminating a Branch. Learn more about exhibitions in <a href="#exhibitions">Exploring Exhibitions</a> below.</p>
-                        </dd>
-                        <dt>Core Priorities</dt>
-                        <dd>
-                            <p>Once a Branch is initiated, the Vice core will pursue two options, germination or core augmentation. Classifications tend to be a good indicator of which option a Vice will prefer, though it is not a hard and fast rule. Vices can also pursue both simultaneously, though overall progress in each will be sacrificed.</p>
-                            <p>Germination is the process of expanding the network, a series of VN-packed tracks that extend throughout the Host’s body. Prioritizing this process lays the groundwork for a more efficient and successful dispersion, as a well-established network is key to acquiring as much fuel as possible. Core augmentation is the process of physically expanding the core along these established tracks. Growth otherwise occurs at a near-imperceptible rate so as to not trip the Host’s immune system. Core augmentation is necessary to enact dispersion, so periods of unrestrained growth contribute immensely to that goal.</p>
-                            <p>Though both germination and core augmentation are often prioritized, a Vice will always have a preference, and this preference can influence Branch frequency, feeding and storage habits, and the expected behaviors to look out for prior to the Vice pursuing dispersion. Learn more about these priorities and what they imply for each classification in <a href="./classes/index.html">Classifying Vices</a>.</p>
-                        </dd>
-                    </dl>
-                    <p>Contrary to popular belief, the time between Branches is not part of a Vice’s Branch Policy, and is instead influenced by the method used in addressing the Branch (suspension vs commit) and how much the core was damaged. Learn more about this relationship in Branch Options below.</p>
+                    <p>Contrary to popular belief, the time between Branches is not part of a Vice’s Branch Policy, and is instead influenced by the method used in addressing the Branch (suspension vs commit) and how much the core was damaged. Learn more about this relationship in <a href="#options">Branch Options</a> below.</p>
+                    <h3>Environmental Branch Trigger(s)</h3>
+                    <p>This set of information is established at advent and is referenced during the Quality Assurance Check (QAC) before a Branch. If the current properties of the Host’s environment match at minimum three of the properties found at advent, the Vice will proceed with Branch initiation. Examples of these properties most commonly include sounds and smells, but can even include temperature and the amount of natural light. Learn more about QACs in <a href="#qac">Phase 0: Quality Assurance Check</a>.</p>
+                    <h3>Branch Arena Blueprint</h3>
+                    <p>As discussed in <a href="#metaphysical">The Metaphysical Realm</a>, the layout of the Branch Arena typically pulls inspiration from the environment around the Host at advent.  In the case of a gradual advent, the blueprint often begins as a simple arena, but evolves over time and becomes more complex, some even containing multiple stages or rooms the Vice can switch between during production.</p>
+                    <p>Small details of the Branch Arena are less detailed or difficult to parse when observed directly, much like the details of a dream. The overall blueprint of the Branch Arena stays roughly the same throughout a Vice’s life cycle, but can and often does increase in complexity as the Vice matures, especially for those with a gradual advent or a higher threat level.</p>
+                    <p>Some classifications are capable of constructing novel blueprints to better suit their exhibition, but this is only observed in extremely intelligent Vices with a higher threat level&mdash;such as <a href="./classes/omega.html">Omega</a> and <a href="./classes/epsilon.html">Epsilon</a> Vices.</p>
+                    <h3>Exhibition Presentation</h3>
+                    <p>Only present in the Branch Arena, a Vice's exhibition shields the vulnerable core from the Host, Adjuncts and their patches. Exhibitions typically take the form of predatory animals—though the possibilities are endless. Some exhibitions are comprised of the properties present at advent, typically textures, smells or sounds and can even draw from the innate fears of the Host. The characteristics of the exhibition are also influenced by its attack strategy, and vice versa, an example being how defensive exhibitions typically have a thicker skin or protective outer shell.</p>
+                    <p>Exhibitions are incredibly unique and vary greatly between Hosts, but tend to stay roughly the same throughout a Vice’s life cycle. As with the Branch Arena blueprint, a Vice’s exhibition can increase in complexity as the Vice matures. Exhibitions can be classified by size, and tend to stay in the same size grouping, even as complexity increases. Learn more about exhibitions in <a href="#exhibitions">Exploring Exhibitions</a> below.</p>
+                    <h3>Exhibition Attack Strategy</h3>
+                    <p>This data set is relatively broad and refers to a Vice’s M.O., that is, how the Vice interacts with the Host and Adjuncts within the Branch Arena. This attack strategy informs how the exhibition is classified, as offensive, defensive, hasty, or balanced. A Vice’s attack strategy is not directly tied to its classification, thought most classes tend to see higher concentrations of specific exhibition attack strategies. For example, <a href="./classes.theta.html">Theta Vices</a> Vices typically have hasty exhibitions while <a href="./classes/zeta.html">Zeta Vices</a> almost exclusively have defensive exhibitions.</p>
+                    <p>Attack strategy also refers to the literal plan of attack once the Branch moves into production. This data is extremely broad, as every exhibition is different, but includes preferences such as which extensions the exhibition targets and how the exhibition interacts with the Branch Arena--if it uses objects or hides behind them. These preferences also include the core reactivity or how much damage the core allows before terminating a Branch. Learn more about exhibitions in <a href="#exhibitions">Exploring Exhibitions</a> below.</p>
+                    <h3>Core Priorities</h3>
+                    <p>Once a Branch is initiated, the Vice core will pursue two options, germination or core augmentation. Classifications tend to be a good indicator of which option a Vice will prefer, though it is not a hard and fast rule. Vices can also pursue both simultaneously, though overall progress in each will be sacrificed.</p>
+                    <p>Germination is the process of expanding the network, a series of VN-packed tracks that extend throughout the Host’s body. Prioritizing this process lays the groundwork for a more efficient and successful dispersion, as a well-established network is key to acquiring as much fuel as possible. Core augmentation is the process of physically expanding the core along these established tracks. Growth otherwise occurs at a near-imperceptible rate so as to not trip the Host’s immune system. Core augmentation is necessary to enact dispersion, so periods of unrestrained growth contribute immensely to that goal.</p>
+                    <p>Though both germination and core augmentation are often prioritized, a Vice will always have a preference, and this preference can influence Branch frequency, feeding and storage habits, and the expected behaviors to look out for prior to the Vice pursuing dispersion. Learn more about these priorities and what they imply for each classification in <a href="./classes/index.html">Classifying Vices</a>.</p>
                     <h2 id="options">Branch Options</h2>
                     <p>Hosts and Adjuncts have three options when encountering a Branch, depending on the Branch phase. During staging, an Adjunct can suspend the Branch, and during production the Host or an Adjunct can commit or rescind the Branch.</p>
                     <h3 id="suspend" class="has-label">Suspend <span class="label">Staging</span></h3>
@@ -277,7 +284,7 @@
                                 <h2>Branches are Complicated. Let us Help!</h2>
                             </div>
                             <p>Feeling overwhelmed? Our agents are here to help you achieve your Vice goals. Whether you’re looking for support as you self-treat or are pursuing rescission, we've done the training and learned all the intricacies of Vice behavior so you don't have to.</p>
-                            <a href="#" class="btn">Schedule a Consult</a>
+                            <a href="#" class="btn">Admission Guidance</a>
                             </div>
                         </div>
                     </section>
@@ -307,7 +314,7 @@
                     <p>If contact is interrupted, the Adjunct is sent to the back of the queue. If the Branch is somehow committed or rescinded while an Adjunct is in the queue, they are simply dismissed from the Branch. Adjuncts can be admitted simultaneously if contact was made at the same time, though primary Adjuncts tend to be admitted slightly sooner.</p>
                     <p>If an unpredictable Branch has been initiated and all Adjuncts do not have time to make contact with the Host, making contact with each other will suffice, so long as at least one Adjunct is in contact with the Host. Doing so creates an exponentially staggered queuing effect of bringing in Adjuncts, where Adjuncts that are two or three times removed from the Host can take up to an hour of in-Branch time to be brought in.</p>
                     <p>The key to Branch admission lies in making direct physical contact with the Host. At Branch initiation, the tightly-packed, neutrally-charged VN making up the tracks of a Vice’s network are electrified, temporarily exuding a positive charge. This compromises the track structure as the molecules repel each other and allows the VG previously stored in the tracks to leech into the Host’s bloodstream. If a person makes contact during this time, the human body acts as a conductor and expands the positively-charged electromagnetic field to include them. Breaking contact removes the flow of electricity and dismisses the Adjunct from the queue during staging, or from the Branch Arena during production.</p>
-                    <h3 id="benefits">Adjunct Benefits</h3>
+                    <h3 id="benefits">The Benefits of Employing Adjuncts</h3>
                     <p>The chart below shows how the number of secondary Adjuncts present in the Branch Arena increases the chances of success. The higher the threat level, the more Adjuncts required for higher rates of success. This increased rate of success extends to both committing and rescinding Branches.</p>
                     <table>
                         <caption class="bottom">Increased rates of a successful commit for varying numbers of s!Adjuncts included in a Branch</caption>
@@ -414,7 +421,7 @@
                         <h2>Ready to Take the Next Step?</h2>
                     </div>
                     <p>Our agents are eager to help you achieve your Vice goals. Whether you’re looking for support as you self-treat or are pursuing rescission, we’re here to help.</p>
-                    <a href="#" class="btn">Schedule a Consult</a>
+                    <a href="#" class="btn">Admission Guidance</a>
                     </div>
                     <img src="https://images.unsplash.com/photo-1472491235688-bdc81a63246e" alt="kitty">
                 </div>
@@ -432,7 +439,7 @@
             </ul>
             <ul class="link-list">
                 <li><a href="#">Services, Treatments &amp; Support</a></li>
-                <li><a href="#">Schedule a Consult</a></li>
+                <li><a href="#">Admission Guidance</a></li>
                 <li><a href="#">Vice Research Compendium</a></li>
             </ul>
             <div class="contact">

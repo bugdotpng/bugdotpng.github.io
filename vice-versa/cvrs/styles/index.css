@@ -261,6 +261,12 @@ ol {
   margin-left: 1.25rem;
 }
 
+ul ul,
+ul ol,
+ol ul,
+ol ol {
+  margin-top: 0.5rem;
+}
 ul.two-col,
 ol.two-col {
   column-count: 2;
@@ -374,6 +380,15 @@ address p {
   column-count: 2;
   column-gap: 1.5rem;
 }
+.link-list--three-col {
+  column-count: 3;
+  column-gap: 1.5rem;
+}
+@media screen and (max-width: 800px) {
+  .link-list--three-col {
+    column-count: 1;
+  }
+}
 
 .link,
 .link-list li a {
@@ -412,6 +427,22 @@ h3.has-label,
 }
 
 /* MOLECULES */
+.sidebar-link-list .list-heading {
+  font-size: 1.5rem;
+  font-weight: 800;
+  border-bottom: solid #d1d1d1 2px;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+.sidebar-link-list .link-list li {
+  border-bottom: dashed #d1d1d1 2px;
+  padding-bottom: 0.75rem;
+}
+.sidebar-link-list .link-list li:last-child {
+  padding: 0;
+  border: none;
+}
+
 .testimonial {
   display: flex;
   flex-direction: column;
@@ -590,6 +621,7 @@ h3.has-label,
   gap: 0.5rem;
   margin: 0;
   list-style-type: none;
+  flex-wrap: wrap;
 }
 .breadcrumbs ol li {
   font-family: "Azeret Mono", monospace;
@@ -997,6 +1029,10 @@ h3.has-label,
 .alert p {
   font-family: "Azeret Mono", monospace;
   margin-bottom: 0.5rem;
+}
+.alert__heading:last-child,
+.alert p:last-child {
+  margin-bottom: 0;
 }
 
 .card img {
@@ -1536,7 +1572,7 @@ table .sector {
   color: #3e3e3e;
 }
 .sidebar-menu ul li:last-child {
-  border: none;
+  border-bottom: none;
 }
 .sidebar-menu ul li a {
   padding: 0.75rem;
@@ -1703,6 +1739,10 @@ table .sector {
   margin-top: 3rem !important;
 }
 
+.pt-0 {
+  padding-top: 0 !important;
+}
+
 .pt-sm {
   padding-top: 0.5rem !important;
 }
@@ -1739,11 +1779,22 @@ table .sector {
   padding: 0 1.5rem;
   margin-bottom: 3rem;
 }
+@media screen and (max-width: 600px) {
+  .internal-page {
+    flex-wrap: wrap;
+  }
+}
 .internal-page .sidebar {
   width: 25%;
   position: sticky;
   top: 1rem;
   align-self: flex-start;
+}
+@media screen and (max-width: 600px) {
+  .internal-page .sidebar {
+    width: 100%;
+    order: 2;
+  }
 }
 .internal-page .sidebar .top {
   margin-top: 1.5rem;
@@ -1755,7 +1806,13 @@ table .sector {
   margin-top: 1.5rem;
 }
 .internal-page .main-content {
-  width: 77%;
+  width: 75%;
+}
+@media screen and (max-width: 600px) {
+  .internal-page .main-content {
+    width: 100%;
+    order: 1;
+  }
 }
 .internal-page .main-content .section-wrap:not(.section-wrap--light-gray) {
   padding-left: 0;

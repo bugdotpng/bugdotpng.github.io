@@ -10,30 +10,44 @@
         <link href="https://fonts.googleapis.com/css2?family=Azeret+Mono:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital@0;1&family=Noto+Serif:ital,wdth,wght@0,62.5,100..900;1,62.5,100..900&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="../styles/index.css" type="text/css">
         <script src="https://kit.fontawesome.com/958a925dc2.js" crossorigin="anonymous"></script>
+        <script src="../js/index.js"></script>
     </head>
     <body>
         <header class="header">
         <div class="header__top header__top--on-dark">
+            <a href="./index.html" class="home">
             <div class="logo logo--horizontal">
-            <span class="nsh1">CVRS</span>
-            <span class="wordmark">Center for <strong>Vice Research & Support</strong></span>
+                <span class="nsh1">CVRS</span>
+                <span class="wordmark">Center for <strong>Vice Research & Support</strong></span>
             </div>
-            <nav class="header__nav" aria-label="Primary Navigation">
-            <ol>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Services, Treatments &amp; Support</a></li>
-                <li class="login"><a href="#">Log In</a></li>
-            </ol>
-            </nav>
+            </a>
+            <button onclick="menuToggle()" class="menu-toggle" id="menu-toggle">Menu <span class="menu-icon"><span></span></button>
         </div>
-        <div class="header__bottom">
-            <nav class="header__nav--secondary" aria-label="Secondary Navigation">
-            <ol>
-                <li><a href="#">Our Team</a></li>
-                <li><a href="#">Schedule a Consult</a></li>
-                <li><a href="#">Vice Research Compendium</a></li>
-            </ol>
+        </div>
+        <div class="header__bottom" id="menu-dropdown">
+            <nav aria-label="Primary Navigation">
+            <div class="col">
+                <span class="superhead">Quick Links</span>
+                <ol class="link-list">
+                <li><a href="../about/index.html">About Us</a></li>
+                <li><a href="../about/our-team/index.html">Our Team</a></li>
+                <li><a href="../about/our-mission.html">Mission Statement</a></li>
+                <li><a href="../about/careers/index.html">Careers</a></li>
+                </ol>
+            </div>
+            <div class="col">
+                <span class="superhead">Patient Resources</span>
+                <ol class="link-list">
+                <li><a href="../services/index.html">Services, Treatment &amp; Support</a></li>
+                <li><a href="../vrc/index.html">Vice Research Compendium</a></li>
+                <li><a href="../admission.html">Admission Guidance</a></li>
+                <li><a href="../login/index.html">Patient Login</a></li>
+                </ol>
+            </div>
+            <div class="info">
+                <span class="superhead">Contact Us</span>
+                <p>For more information, call us at (214) 877-8423 or send an email to <a href="mailto:info@cvrs.com">info@cvrs.com</a>.</p>
+            </div>
             </nav>
         </div>
         </header>
@@ -163,7 +177,7 @@
             </ul>
             <ul class="link-list">
                 <li><a href="#">Services, Treatments &amp; Support</a></li>
-                <li><a href="#">Schedule a Consult</a></li>
+                <li><a href="#">Admission Guidance</a></li>
                 <li><a href="#">Vice Research Compendium</a></li>
             </ul>
             <div class="contact">
