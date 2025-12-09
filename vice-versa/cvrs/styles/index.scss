@@ -15,6 +15,18 @@ $navy: #1d2f4b;
 $blue: #0689b9;
 $lightblue: #99f2eb;
 
+$bg-red: #E33E4E;
+$bg-yellow: #EEAE38;
+$bg-green: #70CC54;
+$bg-blue: #4CBAEA;
+$bg-purple: #C650F5;
+
+$text-red: #C6192A;
+$text-gold: #B35900;
+$text-green: #0F8521;
+$text-blue: #166EA5;
+$text-purple: #951AC6;
+
 $notoserif: "Noto Serif", serif;
 $notosans: "Noto Sans", sans-serif;
 $mono: "Azeret Mono", monospace;
@@ -403,6 +415,22 @@ h3.has-label {
   color: $navy;
   font-weight: 500;
   font-style: normal;
+  &--red {
+    border-color:$bg-red;
+    color:$text-red;
+  }
+  &--black {
+    border-color:$gray800;
+    color:$black;
+  }
+  &--green {
+    border-color:$bg-green;
+    color:$text-green;
+  }
+  &--yellow {
+    border-color:$bg-yellow;
+    color:$text-gold;
+  }
 }
 
 /* MOLECULES */
@@ -627,7 +655,47 @@ h3.has-label {
   }
 }
 
-.desc-list:not(.searchable-desc-list, .desc-list--feature) {
+.overview {
+  width:30%;
+  padding:1.5rem;
+  border:solid $blue 2px;
+  border-radius:24px;
+  .superhead {
+    margin-bottom:1rem;
+  }
+  .desc-list {
+    .desc-list__item {
+      display:flex;
+      align-items:center;
+      width:100%;
+      gap:.5rem;
+      margin-bottom:.5rem;
+      &:last-child {
+        margin-bottom:0;
+      }
+      dt {
+        text-transform:none;
+        font-size:.9rem;
+        display:flex;
+        flex:1 0 20px;
+        align-items:center;
+        gap:.5rem;
+        margin-bottom:0;
+        &::after {
+          content:"";
+          border-top:dashed $gray300 2px;
+          flex: 1 0 20px;
+          display:block;
+          height:2px;
+        }
+      }
+      dd {
+        font-size:.9rem;
+      }
+    }
+  }
+}
+.desc-list:not(.searchable-desc-list dl, .desc-list--feature, .overview .desc-list) {
   border: solid $lightblue 2px;
   padding: 2rem;
 }
@@ -1010,6 +1078,11 @@ h3.has-label {
   }
 }
 .card {
+  &--list {
+    padding-bottom:2rem;
+    margin-bottom:2rem;
+    border-bottom:dashed $gray300 2px;
+  }
   img {
     width: 100%;
     margin-bottom: 0.75rem;
@@ -1132,6 +1205,10 @@ h3.has-label {
   padding: 2rem;
   position: relative;
   border-bottom: dashed $gray300 2px;
+  #qac {
+    @extend h5;
+    font-size:1.5rem;
+  }
   &:only-child,
   &:last-child {
     border-bottom: none;
@@ -1837,6 +1914,21 @@ table {
 .pt-xxl {
   padding-top:3rem !important;
 }
+.mb-sm {
+  margin-bottom:.5rem !important;
+}
+.mb-md {
+  margin-bottom:1rem !important;
+}
+.mb-lg {
+  margin-bottom:1.5rem !important;
+}
+.mb-xl {
+  margin-bottom:2rem !important;
+}
+.mb-xxl {
+  margin-bottom:3rem !important;
+}
 .border {
   border:solid $blue 2px !important;
 }
@@ -1866,6 +1958,21 @@ table {
       width:100%;
       order:2;
     }
+    .link.link--back {
+      display:inline-block;
+      margin-bottom:.5rem;
+      text-decoration:none;
+      border-bottom:solid transparent 2px;
+      padding-bottom:.125rem;
+      &::before {
+        content:"\2190";
+        margin-right:.25rem;
+        font-size:1.25rem;
+      }
+      &:hover, &:active, &:focus {
+        border-bottom:solid $navy 2px;
+      }
+    }
     .top {
       margin-top:1.5rem;
       display:block;
@@ -1882,6 +1989,12 @@ table {
       width:100%;
       order:1;
     }
+    .desc-list {
+      dd {
+        font-family:$notosans;
+        font-size:1.1rem;
+      }
+    }
     .section-wrap:not(.section-wrap--light-gray) {
       padding-left:0;
       padding-right:0;
@@ -1894,6 +2007,9 @@ table {
       width:100%;
     }
     ul + h2, ul + h3 {
+      margin-top:1rem;
+    }
+    > ul + p, > ol + p {
       margin-top:1rem;
     }
     > h2, > h3 {
