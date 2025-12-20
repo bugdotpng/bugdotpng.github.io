@@ -460,17 +460,17 @@ h3.has-label {
     font-family: $notoserif;
     font-size: 2rem;
     line-height: 1.3;
-    margin-top: 3.5rem;
+    margin-top: 4.5rem;
     color: $navy;
     &::before {
       content: "“";
       display: block;
-      font-size: 7rem;
+      font-size: 8rem;
       color: $blue;
       font-weight: bold;
       font-family: Georgia;
       position: absolute;
-      margin-top: -4.5rem;
+      margin-top: -5.5rem;
     }
   }
   figcaption {
@@ -486,7 +486,7 @@ h3.has-label {
       height: 2px;
       background: $gray300;
       display: block;
-      margin: 0.75rem 0;
+      margin: 1rem 0;
     }
   }
   img {
@@ -495,7 +495,7 @@ h3.has-label {
     object-fit: cover;
   }
   img + .blockquote {
-    background: $gray800;
+    background: $navy;
     padding: 1rem 2rem 2rem 2rem;
     width: 90%;
     margin: 0 auto;
@@ -509,7 +509,7 @@ h3.has-label {
     figcaption {
       color: $lightblue;
       &::before {
-        background: $gray600;
+        background: $lightblue;
       }
     }
     @media screen and (max-width: 600px) {
@@ -654,12 +654,77 @@ h3.has-label {
     }
   }
 }
+.has-label.has-label--with-tooltip {
+  .heading {
+    width:100%;
+  }
+  .tooltip .tooltip__hover {
+    border-radius:0;
+    left:unset;
+    right:0;
+    bottom:2.5rem;
+    border:solid $blue 2px;
+    box-shadow:none;
+    width:500px;
+  }
+  .tooltip .tooltip__hover::after {
+    content:none;
+  }
+}
+.tooltip {
+  position: relative;
+  margin-left: 0.5rem;
+  color:$black;
+  font-family:$notosans;
+  font-size:1.5rem;
+  line-height:1.5;
+  font-style:normal;
+}
+.tooltip .tooltip__hover {
+  position: absolute;
+  font-size:1rem;
+  bottom: 3rem;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.2s ease;
+  width: 300px;
+  left: calc(-150px + 0.5rem);
+  padding: 1rem;
+  background: #ffffff;
+  display: flex;
+  border-radius: 12px;
+  box-shadow: 0 0 3rem rgba(0, 0, 0, 0.5);
+}
+.tooltip .tooltip__hover::after {
+  content: " ";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -1rem;
+  border-width: 1rem;
+  border-style: solid;
+  border-color: #ffffff transparent transparent transparent;
+}
+.tooltip .tooltip__hover img {
+  width: 100%;
+}
+.tooltip:hover .tooltip__hover, .tooltip:active .tooltip__hover, .tooltip:focus .tooltip__hover {
+  visibility: visible;
+  opacity: 1;
+}
 
 .overview {
   width:30%;
   padding:1.5rem;
   border:solid $blue 2px;
   border-radius:24px;
+  @media screen and (max-width:1000px) {
+    width:40%;
+  }
+  @media screen and (max-width:750px) {
+    width:100%;
+    order:2;
+  }
   .superhead {
     margin-bottom:1rem;
   }
@@ -718,8 +783,9 @@ h3.has-label {
     border-bottom: dashed $gray300 2px;
     padding-bottom: 1rem;
     margin-bottom: 1rem;
+    font-family: $notosans;
+    font-size: 1rem;
     p {
-      font-family: $mono;
       font-size: 1rem;
       &:last-child {
         margin-bottom: 0;
@@ -1063,17 +1129,106 @@ h3.has-label {
   margin-bottom: 1rem;
   &__heading {
     color: $blue;
-    font-weight: bold;
+    font-family:$mono;
+    font-weight: 800;
     font-size: 1.5rem;
     text-transform: uppercase;
     display: block;
   }
   &__heading,
   p {
-    font-family: $mono;
     margin-bottom: 0.5rem;
     &:last-child {
       margin-bottom: 0;
+    }
+  }
+}
+.standalone-card {
+  padding:3rem;
+  display:flex;
+  flex-direction:column;
+  h2, h3 {
+    margin-bottom:.5rem;
+    &::after {
+      content: "";
+      display: block;
+      width: 50px;
+      height: 4px;
+      background-color: $blue;
+      margin: 0.75rem 0;
+    }
+  }
+  .icon {
+    margin-bottom:.5rem;
+  }
+  .btn {
+    width:fit-content;
+  }
+  &--light-gray {
+    background:$gray200;
+  }
+  &--on-dark {
+    background:$navy;
+    h2, h3 {
+      &::after {
+        background-color:$lightblue;
+      }
+    }
+  }
+}
+.details {
+  width:100%;
+  border-bottom:dashed $blue 2px;
+  margin-bottom:1.5rem;
+  &:last-child {
+    margin-bottom:0;
+  }
+  summary {
+    cursor:pointer;
+    padding-bottom:1.5rem;
+    font-family:$mono;
+    text-transform:uppercase;
+    font-weight:800;
+    list-style-type:none;
+    display:flex;
+    gap:1.5rem;
+    font-size:1.25rem;
+    justify-content:space-between;
+    &::after {
+      content:"+";
+      font-weight:400;
+      color:$blue;
+    }
+  }
+  &:hover, &:active, &:focus {
+    border-bottom:solid $blue 2px;
+    summary {
+      color:$blue;
+    }
+  }
+  &__content {
+    padding:1.5rem 0;
+    border-top:dashed $gray300 2px;
+    p {
+      &:last-child {
+        margin-bottom:0;
+      }
+    }
+  }
+  &[open] {
+    border-bottom:solid $blue 2px;
+    &:hover, &:active, &:focus {
+      summary {
+        color:$black;
+      }
+    }
+    summary {
+      &:hover {
+        color:$gray500;
+      }
+    }
+    summary::after {
+      content: "-";
     }
   }
 }
@@ -1231,7 +1386,16 @@ h3.has-label {
     margin: 0;
   }
 }
-
+.accordion-slab {
+  display:flex;
+  gap:1.5rem;
+  .intro {
+    width:33.33%;
+  }
+  .accordions {
+    width:66.66%;
+  }
+}
 .card-group {
   display: flex;
   flex-wrap: wrap;
@@ -1261,6 +1425,15 @@ h3.has-label {
         h3 {
           @extend .nsh4;
         }
+        .superhead, .subhead {
+          font-size:.9rem;
+        }
+      }
+      p {
+        font-size:1.1rem;
+      }
+      .btn {
+        padding:.75rem;
       }
       @media screen and (max-width: 1200px) {
         width: calc(50% - 0.75rem);
@@ -1946,15 +2119,16 @@ table {
   gap:1.5rem;
   padding:0 1.5rem;
   margin-bottom:3rem;
-  @media screen and (max-width:600px) {
+  @media screen and (max-width:750px) {
     flex-wrap:wrap;
   }
   .sidebar {
     width:25%;
+    min-width:250px;
     position:sticky;
     top:1rem;
     align-self:flex-start;
-    @media screen and (max-width:600px) {
+    @media screen and (max-width:750px) {
       width:100%;
       order:2;
     }
@@ -1985,7 +2159,7 @@ table {
   }
   .main-content {
     width:75%;
-    @media screen and (max-width:600px) {
+    @media screen and (max-width:750px) {
       width:100%;
       order:1;
     }
