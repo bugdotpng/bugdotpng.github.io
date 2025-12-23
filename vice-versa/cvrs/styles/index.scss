@@ -174,12 +174,18 @@ h1,
   font-size: 4.5rem;
   font-weight: bold;
   color: $navy;
+  @media screen and (max-width:450px) {
+    font-size:3.5rem;
+  }
 }
 h2,
 .nsh2 {
   text-transform: uppercase;
   font-size: 3rem;
   color: $gray700;
+  @media screen and (max-width:450px) {
+    font-size:2.5rem;
+  }
 }
 h3,
 .nsh3 {
@@ -187,6 +193,9 @@ h3,
   color: $navy;
   font-style: italic;
   text-transform: none;
+  @media screen and (max-width:450px) {
+    font-size:2.25rem;
+  }
 }
 h4,
 .nsh4 {
@@ -223,7 +232,7 @@ h1,
 h2,
 h3,
 h4 {
-  line-height: 1.3;
+  line-height: 1.1;
 }
 h5,
 h6 {
@@ -519,6 +528,7 @@ h3.has-label {
   }
 }
 .factoid {
+   
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -531,6 +541,10 @@ h3.has-label {
   }
   .heading-group {
     text-align: center;
+    .nsh2 {
+      font-size:2.5rem;
+      font-weight:bold;
+    }
   }
 }
 .intro {
@@ -978,6 +992,10 @@ h3.has-label {
         width: 100%;
         order: 2;
       }
+      .info {
+        width:100%;
+        margin-top:1rem;
+      }
       .breadcrumbs {
         margin-bottom: 1rem;
       }
@@ -1409,6 +1427,18 @@ h3.has-label {
       width: 100%;
     }
   }
+  &--half {
+    gap:3rem;
+    .intro {
+      width:100%;
+    }
+    .card {
+      width: calc(50% - 1.5rem);
+      @media screen and (max-width: 600px) {
+        width: 100%;
+      }
+    }
+  }
   &--internal {
     .card {
       width: calc(50% - 0.75rem);
@@ -1444,6 +1474,7 @@ h3.has-label {
     }
   }
 }
+
 .section-wrap {
   padding: 3rem 1.5rem;
   .intro {
@@ -2309,6 +2340,12 @@ table {
     }
     @media screen and (max-width:800px) {
       width:100%;
+    }
+    img {
+      width:100%;
+      &:first-child {
+        margin-bottom:1rem;
+      }
     }
     h2, h3 {
       margin-bottom:.5rem;
