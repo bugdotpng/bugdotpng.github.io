@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Patient Resources | CVRS</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Azeret+Mono:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital@0;1&family=Noto+Serif:ital,wdth,wght@0,62.5,100..900;1,62.5,100..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="./styles/index.css" type="text/css">
+        <script src="https://kit.fontawesome.com/958a925dc2.js" crossorigin="anonymous"></script>
+        <script src="./js/index.js"></script>
+    </head>
+    <body>
+        <header class="header">
+        <div class="header__top header__top--on-dark">
+            <a href="./index.html" class="home">
+            <div class="logo logo--horizontal">
+                <span class="nsh1">CVRS</span>
+                <span class="wordmark">Center for <strong>Vice Research & Support</strong></span>
+            </div>
+            </a>
+            <button onclick="menuToggle()" class="menu-toggle" id="menu-toggle">Menu <span class="menu-icon"><span></span></button>
+        </div>
+        </div>
+        <div class="header__bottom" id="menu-dropdown">
+            <nav aria-label="Primary Navigation">
+            <div class="col">
+                <span class="superhead">Quick Links</span>
+                <ol class="link-list">
+                <li><a href="./about/index.html">About Us</a></li>
+                <li><a href="./about/our-team/index.html">Our Team</a></li>
+                <li><a href="./about/our-mission.html">Mission Statement</a></li>
+                <li><a href="./about/careers/index.html">Careers</a></li>
+                </ol>
+            </div>
+            <div class="col">
+                <span class="superhead">Patient Resources</span>
+                <ol class="link-list">
+                <li><a href="./services/index.html">Services, Treatment &amp; Support</a></li>
+                <li><a href="./vrc/index.html">Vice Research Compendium</a></li>
+                <li><a href="./admission.html">Admission Guidance</a></li>
+                <li><a href="./portal/index.html">Patient Login</a></li>
+                </ol>
+            </div>
+            <div class="info">
+                <span class="superhead">Contact Us</span>
+                <p>For more information, call us at (214) 877-8423 or send an email to <a href="mailto:bugdotinfo@gmail.com">info@cvrs.com</a>.</p>
+            </div>
+            </nav>
+        </div>
+        </header>
+        <main>
+            <!-- PAGE HEADER -->
+            <div class="page-header page-header--dark-gradient page-header--tall">
+                <div class="page-header__container .page-header__container--on-dark">
+                    <div class="content">
+                    <div class="heading-group">
+                    <h1>Patient Resources</h1>
+                    </div>
+                    <p>Browse our available resources to help you get started on your Vice journey. Whether you’re looking to self-treat or reach our for support, our resources will provide you with the information you need to make the best decisions about your treatment plans.</p>
+                </div>
+                    <div class="image">
+                    <img src="./images/resources.jpg" alt="A woman in dark blue scrubs holds out a pink stethoscope in the shape of a heart.">
+                    </div>
+                </div>
+            </div>
+            <!-- CONTENT FEATURE -->
+            <section class="section-wrap">
+            <div class="content-feature">
+                <div class="content">
+                <div class="heading-group">
+                    <h2>Primary Care Services</h2>
+                </div>
+                <p>Primary Care agents provide long-term treatment for patients who have been screened and admitted by a Record Proctor. These agents are equipped with the knowledge and training to help patients along their Vice journey and even perform rescission when appropriate.</p>
+                <a href="./services/primary-care/index.html" class="btn" aria-label="learn more about our Primary Care serivces">Learn More</a>
+                </div>
+                <img src="./images/primary-care.jpg" alt="A man in a white coat discusses xrays with two other people, also in white coats.">
+            </div>
+            </section>
+            <!-- CARD GROUP -->
+            <section class="section-wrap pt-0">
+            <div class="card-group card-group--half">
+                <div class="card">
+                    <div class="icon">
+                        <span class="fa-solid fa-circle-user"></span>
+                    </div>
+                    <div class="heading-group">
+                        <h2>Patient Portal</h2>
+                    </div>
+                    <p>Our patient portal is a powerful tool to help you stay in control of your treatment plan. Make appointments, message your care team, and maintain your timeline all in one convenient place.</p>
+                    <a class="link link--large" href="./portal/index.html">Log In</a>
+                </div>
+                <div class="card">
+                    <div class="icon">
+                        <span class="fa-solid fa-clipboard-list"></span>
+                    </div>
+                    <div class="heading-group">
+                        <h2>Admission Guidance</h2>
+                    </div>
+                    <p>Our agents are eager to help our patients achieve their Vice goals. Whether they’re looking for support as they self-treat or are pursuing rescission, we’re here to help.</p>
+                    <a class="link link--large" href="./admission.html">Browse our Admission Guidance</a>
+                </div>
+            </div>
+            </section>
+            <!-- CARD SLAB -->
+            <section class="section-wrap section-wrap--light-gray">
+            <div class="card-slab">
+            <div class="intro">
+                <div class="heading-group">
+                    <h2>Other Available Services</h2>
+                </div>
+                <p>While Primary Care is available for scheduled appointments, Vices are unpredictable, and an immediate response may be required to address urgent circumstances.</p>
+            </div>
+            <div class="card card--border">
+                <div class="heading-group">
+                    <h3>Urgent Care</h3>
+                </div>
+                <p>A station’s Urgent Care wing is open 24/7. If a Branch has been suspended in the last 12 hours, we recommend admitting for Branch remediation services, while recently committed Branches may require our Branch recovery services. Patients can also be admitted for activity monitoring if they are at risk of an impending Branch initiation.</p>
+                <a class="link link--large" href="./services/urgent-care/index.html" aria-label="Learn more about our Urgent Care services">Learn More</a>
+                </div>
+            <div class="card card--border">
+                <div class="heading-group">
+                    <h2>Public Deployment</h2>
+                </div>
+                <p>Agents in Public Deployment are on-call 24/7, patrolling high-traffic areas in the community, such as streets, shopping hubs, and public events. These agents respond to public and rogue Branches or can be requested to address a potential threat by calling (214) 877-8423. This team also serves as a clean-up crew after Branches have been addressed.</p>
+                <a class="link link--large" href="./services/public-deployment/index.html" aria-label="Learn more about our Public Deployment services">Learn More</a>
+                </div>
+            </div>
+            </section>
+            <!-- CONTENT FEATURE -->
+            <section class="section-wrap">
+            <div class="content-feature">
+                <img src="./images/vrc.jpg" alt="A closeup of a stethoscope sitting next to a pile of tabbed books.">
+                <div class="content">
+                <div class="heading-group">
+                    <span class="superhead">Self-Treatment</span>
+                    <h2>Vice Research Compendium</h2>
+                </div>
+                <p>CVRS is dedicated to the public distribution and maintenance of our research database. Knowledge is power, and every advantage puts our patients one step closer to completing their Vice journey.</p>
+                <a href="./vrc/index.html" class="btn">Read the VRC</a>
+                </div>
+            </div>
+            </section>
+            <!-- CARD SLAB -->
+            <section class="section-wrap pt-0">
+                <div class="card-slab">
+                    <div class="intro">
+                    <div class="heading-group">
+                        <span class="superhead">Self-Treatment</span>
+                        <h2>Getting Started</h2>
+                    </div>
+                    <p>For those new to the world of Vices, we recommend starting with these resources to establish a firm foundation in Vice fundamentals.</p>
+                    </div>
+                    <div class="card card--border">
+                        <div class="heading-group">
+                            <h2>What are Vices?</h2>
+                        </div>
+                        <p>Read our high-level overview and brief history of Vices to gradually ease into the world of vicology.</p>
+                        <a class="link link--large" href="./vrc/intro.html" aria-label="Learn more about Vices">Learn More</a>
+                    </div>
+                    <div class="card card--border">
+                        <div class="heading-group">
+                            <h2>Glossary</h2>
+                        </div>
+                        <p>Learn the common industry terms likely to be heard during the screening process and in appointments.</p>
+                        <a class="link link--large" href="./vrc/glossary.html" aria-label="Learn more about the VRC glossary">Learn More</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+            <div class="logo">
+                <span class="nsh1">CVRS</span>
+                <span class="wordmark">Center for <strong>Vice Research & Support</strong></span>
+            </div>
+            <ul class="link-list">
+                <li><a href="./about/our-mission.html">The CVRS Mission</a></li>
+                <li><a href="./about/our-team/index.html">Our Team</a></li>
+                <li><a href="./about/careers/index.html">Careers</a></li>
+            </ul>
+            <ul class="link-list">
+                <li><a href="./services/index.html">Services, Treatments &amp; Support</a></li>
+                <li><a href="./admission.html">Admission Guidance</a></li>
+                <li><a href="./vrc/index.html">Vice Research Compendium</a></li>
+            </ul>
+            <div class="contact">
+                <span class="contact__heading">Mailing Address</span>
+                <address>
+                <p>2500 Victory Park Lane, Ste. 1200<br>
+                Dallas, Texas &bull; 75219</p>
+                </address>
+                <p>For more information, call us at (214) 877-8423 or send an email to <a href="mailto:bugdotinfo@gmail.com">info@cvrs.com</a>.</p>
+            </div>
+            <div class="compliance">
+                <p>&copy; 2025 Center for Vice Research and Support &bull; <a href="./sitemap.html">Sitemap</a></p>
+            </div>
+        </footer>
+    </body>
+</html>
