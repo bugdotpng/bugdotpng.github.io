@@ -70,6 +70,12 @@ $mono: "Azeret Mono", monospace;
 * {
 	box-sizing:border-box;
 }
+strong {
+	font-weight:bold;
+}
+em {
+	font-style:italic;
+}
 
 body {
 	background:$gray900;
