@@ -57,6 +57,14 @@ table {
   box-sizing: border-box;
 }
 
+strong {
+  font-weight: bold;
+}
+
+em {
+  font-style: italic;
+}
+
 body {
   background: #111111;
   font-family: "Work Sans", sans-serif;
