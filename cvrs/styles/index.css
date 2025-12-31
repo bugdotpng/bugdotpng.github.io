@@ -1608,7 +1608,7 @@ h3.has-label,
 [class*="--on-dark"] .page-header__container .content .heading-group::after {
   background: #99f2eb;
 }
-[class*="--on-dark"] .standalone-card .icon span {
+[class*="--on-dark"].standalone-card .icon span {
   color: #99f2eb;
 }
 [class*="--on-dark"] .content .heading-group::after {
