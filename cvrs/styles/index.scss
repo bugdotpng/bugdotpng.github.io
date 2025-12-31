@@ -1178,6 +1178,10 @@ h3.has-label {
   }
   .icon {
     margin-bottom:.5rem;
+    span {
+      font-size: 3rem;
+      color: $blue;
+    }
   }
   .btn {
     width:fit-content;
@@ -1632,6 +1636,14 @@ h3.has-label {
       }
     }
   }
+  .standalone-card {
+    .icon {
+      span {
+        color: $lightblue;
+      }
+    }
+  }
+
   .content {
     .heading-group::after {
       background: $lightblue;

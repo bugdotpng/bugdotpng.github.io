@@ -1209,6 +1209,10 @@ h3.has-label,
 .standalone-card .icon {
   margin-bottom: 0.5rem;
 }
+.standalone-card .icon span {
+  font-size: 3rem;
+  color: #0689b9;
+}
 .standalone-card .btn {
   width: fit-content;
 }
@@ -1603,6 +1607,9 @@ h3.has-label,
 }
 [class*="--on-dark"] .page-header__container .content .heading-group::after {
   background: #99f2eb;
+}
+[class*="--on-dark"] .standalone-card .icon span {
+  color: #99f2eb;
 }
 [class*="--on-dark"] .content .heading-group::after {
   background: #99f2eb;
