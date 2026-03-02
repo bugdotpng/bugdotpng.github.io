@@ -105,19 +105,15 @@ header {
   justify-content: space-between;
   flex-wrap: wrap;
 }
-@media screen and (max-width: 450px) {
-  header {
-    flex-direction: column;
-  }
-}
 header .site-header {
   margin: 0;
   font-size: 1rem;
   color: #d1d1d1;
 }
 @media screen and (max-width: 450px) {
-  header .site-header {
-    text-align: center;
+  header .site-header .hash {
+    display: none;
+    visibility: hidden;
   }
 }
 header .site-header a {
@@ -126,6 +122,11 @@ header .site-header a {
   text-decoration: none;
   padding: 1rem;
   display: inline-block;
+}
+@media screen and (max-width: 450px) {
+  header .site-header a {
+    padding: 0.75rem;
+  }
 }
 header .site-header a:hover, header .site-header a:active, header .site-header a:focus {
   color: #61cfe2;
@@ -585,6 +586,11 @@ footer a.top::after {
 .menu-toggle .menu-icon span {
   margin: 0.25rem 0;
 }
+@media screen and (max-width: 450px) {
+  .menu-toggle {
+    padding: 0.75rem;
+  }
+}
 .menu-toggle:hover, .menu-toggle:active, .menu-toggle:focus {
   color: #61cfe2;
 }
@@ -818,6 +824,9 @@ footer a.top::after {
     order: 2;
     width: calc(50% - 0.75rem);
   }
+  .chapter-footer .forward:nth-child(2):last-child, .chapter-wayfinding .forward:nth-child(2):last-child {
+    width: 100%;
+  }
 }
 @media screen and (max-width: 700px) {
   .chapter-footer .backward, .chapter-wayfinding .backward {
@@ -902,12 +911,6 @@ footer a.top::after {
   text-wrap: nowrap;
   color: #d1d1d1;
   font-weight: 200;
-}
-@media screen and (max-width: 450px) {
-  .chapter-wayfinding .page-title .superhead {
-    text-wrap: wrap;
-    display: block;
-  }
 }
 .chapter-wayfinding .page-title::before, .chapter-wayfinding .page-title::after {
   content: "";

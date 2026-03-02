@@ -116,22 +116,25 @@ header {
     display:flex;
     justify-content:space-between;
     flex-wrap:wrap;
-    @media screen and (max-width:450px) {
-        flex-direction:column;
-    }
     .site-header {
         margin:0;
         font-size:1rem;
         color:$gray300;
-    @media screen and (max-width:450px) {
-        text-align:center;
-    }
+        .hash {
+            @media screen and (max-width:450px) {
+                display:none;
+                visibility:hidden;
+            }
+        }
         a {
             color:$white;
             font-family:$mono;
             text-decoration:none;
             padding:1rem;
             display:inline-block;
+            @media screen and (max-width:450px) {
+                padding:.75rem;
+            }
             &:hover, &:active, &:focus {
                 color:$accent-light;
             }
@@ -550,81 +553,84 @@ footer {
 //// NAVIGATION TOGGLES
 
 .menu-toggle {
-  font-family: $mono;
-  color: $white;
-  background: none;
-  border: none;
-  border-radius: 0;
-  text-transform: uppercase;
-  font-weight: bold;
-  font-size: 1rem;
-  align-self: stretch;
-  padding: 1rem;
-  gap: 0.5rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: 0.3s ease;
-  cursor: pointer;
-  .menu-icon {
-    &::before,
-    &::after,
-    span {
-      content: "";
-      display: block;
-      height: 2px;
-      width: 1rem;
-      border-radius: 1rem;
-      background-size: 100%;
-      background: $white;
-      transition: 0.3s ease;
-    }
-    span {
-      margin: 0.25rem 0;
-    }
-  }
-  &:hover, &:active, &:focus {
-    color: $accent-light;
+    font-family: $mono;
+    color: $white;
+    background: none;
+    border: none;
+    border-radius: 0;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1rem;
+    align-self: stretch;
+    padding: 1rem;
+    gap: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s ease;
+    cursor: pointer;
     .menu-icon {
-      &::before,
-      &::after,
-      span {
-        background: $accent-light;
-      }
-    }
-  }
-            &:focus-visible {
-                outline-offset: -4px;
-            }
-  &.active {
-    background: $gray900;
-    .menu-icon {
-      &::before {
-        transform: rotate(45deg);
-        height: 2px;
-        background: $white;
-      }
-      &::after {
-        transform: rotate(-45deg);
-        height: 2px;
-        background: $white;
-        margin-top: calc(-1rem + 4px);
-      }
-      span {
-        background-color: transparent;
-      }
-    }
-    &:hover,
-    &:focus-visible {
-      color: $accent-light;
-      .menu-icon {
         &::before,
-        &::after {
-          background: $accent-light;
+        &::after,
+        span {
+            content: "";
+            display: block;
+            height: 2px;
+            width: 1rem;
+            border-radius: 1rem;
+            background-size: 100%;
+            background: $white;
+            transition: 0.3s ease;
         }
-      }
+        span {
+            margin: 0.25rem 0;
+        }
     }
-  }
+    @media screen and (max-width:450px) {
+        padding:.75rem;
+    }
+    &:hover, &:active, &:focus {
+        color: $accent-light;
+        .menu-icon {
+            &::before,
+            &::after,
+            span {
+                background: $accent-light;
+            }
+        }
+    }
+    &:focus-visible {
+        outline-offset: -4px;
+    }
+    &.active {
+        background: $gray900;
+        .menu-icon {
+            &::before {
+                transform: rotate(45deg);
+                height: 2px;
+                background: $white;
+            }
+            &::after {
+                transform: rotate(-45deg);
+                height: 2px;
+                background: $white;
+                margin-top: calc(-1rem + 4px);
+            }
+            span {
+                background-color: transparent;
+            }
+        }
+        &:hover,
+        &:focus-visible {
+            color: $accent-light;
+            .menu-icon {
+                &::before,
+                &::after {
+                    background: $accent-light;
+                }
+            }
+        }
+    }
 }
 #menu-dropdown {
     background: $gray900;
@@ -819,6 +825,11 @@ footer {
         @media screen and (max-width:700px) {
             order:2;
             width: calc(50% - .75rem);
+            &:nth-child(2) {
+                &:last-child {
+                    width:100%;
+                }
+            }
         }
     }
     .backward {
@@ -900,10 +911,6 @@ footer {
             text-wrap:nowrap;
             color:$gray300;
             font-weight:200;
-            @media screen and (max-width:450px) {
-                text-wrap:wrap;
-                display:block;
-            }
         }
         &::before, &::after {
             content:"";
