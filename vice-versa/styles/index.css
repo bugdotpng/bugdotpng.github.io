@@ -479,10 +479,14 @@ footer a.top::after {
   padding-left: 3rem;
 }
 .content ul.toc li.patch::before {
-  content: "🟆";
-  margin-left: calc(-3rem - 32.75px);
+  content: "";
+  clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+  margin-left: calc(-3rem - 31px);
   font-family: "Work Sans", sans-serif;
-  font-size: 1.125rem;
+  width: 0.75rem;
+  margin-top: 2px;
+  height: 0.75rem;
+  background: #ffffff;
   display: block;
   position: absolute;
   color: #ffffff;
@@ -503,13 +507,15 @@ footer a.top::after {
   padding-left: 2rem;
 }
 .content ul.toc li.minor::before {
-  content: "◯";
-  margin-left: calc(-2rem - 35px);
-  font-size: 1.125rem;
+  content: "";
+  margin-left: calc(-2rem - 35.5px);
+  width: 1.125rem;
+  height: 1.125rem;
   display: block;
   position: absolute;
-  margin-top: 1px;
-  color: #ffffff;
+  background: #111111;
+  border-radius: 50%;
+  border: solid #ffffff 1px;
 }
 .content ul.toc li.minor::after {
   content: "";
@@ -528,14 +534,16 @@ footer a.top::after {
   font-size: 1rem;
 }
 .content ul.toc li.major::before {
-  content: "⬤";
+  content: "";
   margin-left: -34px;
   font-family: "Work Sans", sans-serif;
-  font-size: 1.3rem;
+  width: 1.125rem;
+  height: 1.125rem;
   display: block;
   position: absolute;
-  margin-top: 3px;
-  color: #ffffff;
+  background: #ffffff;
+  border-radius: 50%;
+  margin-top: 2px;
 }
 .content ul.toc li.major a {
   font-size: 1.5rem;
