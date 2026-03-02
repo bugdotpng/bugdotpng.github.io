@@ -976,3 +976,29 @@ footer {
         }
     }
 }
+
+.captioned-media {
+    display:flex;
+    flex-direction:column;
+    a {
+        cursor:zoom-in;
+        clip-path: polygon(0% 0, 100% 0%, 100% 100%, 0 100%);
+        img {
+            transition:0.3s ease;
+        }
+        &:hover, &:active, &:focus {
+            img {
+                transform:scale(1.05);
+            }
+        }
+    }
+    img, .caption {
+        width:100%;
+    }
+    .caption {
+        padding:1rem;
+        p {
+            font-size:1rem;
+        }
+    }
+}

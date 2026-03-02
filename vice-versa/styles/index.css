@@ -972,3 +972,27 @@ footer a.top::after {
 .gallery a:hover img, .gallery a:active img, .gallery a:focus img {
   transform: scale(1.05);
 }
+
+.captioned-media {
+  display: flex;
+  flex-direction: column;
+}
+.captioned-media a {
+  cursor: zoom-in;
+  clip-path: polygon(0% 0, 100% 0%, 100% 100%, 0 100%);
+}
+.captioned-media a img {
+  transition: 0.3s ease;
+}
+.captioned-media a:hover img, .captioned-media a:active img, .captioned-media a:focus img {
+  transform: scale(1.05);
+}
+.captioned-media img, .captioned-media .caption {
+  width: 100%;
+}
+.captioned-media .caption {
+  padding: 1rem;
+}
+.captioned-media .caption p {
+  font-size: 1rem;
+}
