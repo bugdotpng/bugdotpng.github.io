@@ -765,6 +765,11 @@ footer a.top::after {
 .button-group .btn {
   width: 100%;
 }
+@media screen and (max-width: 875px) {
+  .button-group {
+    flex-direction: column;
+  }
+}
 
 .btn {
   text-align: center;
