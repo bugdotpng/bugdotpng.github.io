@@ -62,6 +62,10 @@ table {
   margin-top: 3rem !important;
 }
 
+.mb-lg {
+  margin-bottom: 3rem !important;
+}
+
 a {
   color: #007b91;
   transition: 0.2s ease;
