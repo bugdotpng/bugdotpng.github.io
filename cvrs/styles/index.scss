@@ -1407,6 +1407,29 @@ h3.has-label {
   p:last-child {
     margin: 0;
   }
+  &--small {
+    .heading-group {
+      margin-bottom:0.25rem;
+      .superhead, .subhead {
+        font-size:1rem;
+      }
+      h2 {
+        text-transform:uppercase;
+        font-size:1.5rem;
+        font-weight: 700;
+        font-family:$mono;
+      }
+    }
+    p {
+      font-size:1rem;
+    }
+    &::before {
+      width: 12px;
+      height: 12px;
+      left: -9px;
+      margin-top:4px;
+    }
+  }
 }
 .accordion-slab {
   display:flex;

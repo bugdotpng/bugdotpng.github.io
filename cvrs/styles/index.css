@@ -1408,6 +1408,27 @@ h3.has-label,
 .timeline__stop p:last-child {
   margin: 0;
 }
+.timeline__stop--small .heading-group {
+  margin-bottom: 0.25rem;
+}
+.timeline__stop--small .heading-group .superhead, .timeline__stop--small .heading-group .subhead {
+  font-size: 1rem;
+}
+.timeline__stop--small .heading-group h2 {
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-family: "Azeret Mono", monospace;
+}
+.timeline__stop--small p {
+  font-size: 1rem;
+}
+.timeline__stop--small::before {
+  width: 12px;
+  height: 12px;
+  left: -9px;
+  margin-top: 4px;
+}
 
 .accordion-slab {
   display: flex;
