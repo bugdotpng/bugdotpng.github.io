@@ -156,6 +156,16 @@ header .site-header a:last-child {
 .body.dream .page-header .content {
   background: transparent;
 }
+.body.case-file .content .red-divider {
+  width: 100%;
+  display: block;
+  background: red;
+  height: 6px;
+  clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+  margin: 3rem 0;
+  z-index: -1;
+  position: relative;
+}
 
 body.body--on-dark {
   background: #111111;

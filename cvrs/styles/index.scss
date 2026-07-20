@@ -252,6 +252,7 @@ p {
 }
 .subhead {
   font-size: 0.9rem;
+  color:$gray600;
   font-style: italic;
 }
 .superhead,
@@ -278,6 +279,7 @@ ol {
   ul,
   ol {
     margin-top: 0.5rem;
+    margin-left:2rem;
   }
   &.two-col {
     column-count: 2;
@@ -362,6 +364,31 @@ a {
       border-color: $blue;
     }
   }
+  &--disabled {
+    background:$gray200;
+    border-color:$gray300;
+    color:$gray500;
+    cursor:not-allowed;
+    &:after {
+      content:none;
+    }
+    &:hover, &:active, &:focus {
+    background:$gray200;
+    border-color:$gray300;
+    color:$gray500;
+    }
+  }
+}
+.note {
+  padding:1.5rem;
+  border:solid $gray300 2px;
+  font-size:1rem;
+  border-radius:12px;
+  strong {
+    font-family:$mono;
+    color:$gray600;
+    text-transform:uppercase;
+  }
 }
 address {
   border-left: solid $blue 2px;
@@ -407,6 +434,7 @@ address {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap:1rem;
 }
 h2.has-label,
 h3.has-label {
@@ -1086,6 +1114,7 @@ h3.has-label {
 }
 .internal-nav {
   margin-bottom: 1.5rem;
+  border:solid transparent 2px;
   summary {
     border-bottom: solid $gray300 2px;
     display: flex;
@@ -1093,7 +1122,7 @@ h3.has-label {
     font-family: $mono;
     font-size: 0.9rem;
     align-items: center;
-    padding: 1rem;
+    padding: 1.25rem;
     transition: 0.2s ease;
     cursor: pointer;
     font-weight: bold;
@@ -1102,37 +1131,42 @@ h3.has-label {
       font-size: 1.25rem;
     }
     &:hover {
-      border-color: $blue;
+      border-color: $gray300;
       background: $gray200;
     }
     &:focus {
-      border-color: $blue;
+      border-color: $gray300;
     }
     &:focus-visible {
       outline: solid $blue 2px;
     }
   }
   .link-list {
-    border-left: solid $blue 8px;
     li {
       margin: 0;
       a {
-        padding: 0.75rem;
+        padding: 0.75rem 1.25rem;
         font-size: 0.9rem;
+        border-bottom: dashed $gray300 2px;
+        &:hover, &:active, &:focus {
+          background:$gray100;
+        }
       }
       &:last-child {
-        border: none;
-        padding-bottom: 0;
+        a {
+          border-bottom:none;
+        }
       }
     }
   }
   &[open] {
+    border:solid $gray300 2px;
     summary {
       &::after {
         content: "-";
       }
       &:focus {
-        border-color: $blue;
+        border-color: $gray300;
       }
       &:hover {
         background: $gray200;
@@ -1377,11 +1411,33 @@ h3.has-label {
   }
 }
 
+.role {
+  font-weight:500;
+  font-size:1.1rem;
+  font-family:$mono;
+  color:$gray600;
+  text-transform:uppercase;
+  background:$gray200;
+  padding:.25rem .5rem;
+  border-radius:6px;
+  white-space:nowrap;
+}
+.note .role {
+  font-size:.9rem;
+}
 .timeline__stop {
   border-left: solid $blue 2px;
   padding: 2rem;
   position: relative;
   border-bottom: dashed $gray300 2px;
+  .has-label {
+    border-bottom:none;
+    padding-bottom:0;
+    @media screen and (max-width:650px) {
+      flex-direction:column;
+      align-items:flex-start;
+    }
+  }
   #qac {
     @extend h5;
     font-size:1.5rem;
@@ -1407,6 +1463,40 @@ h3.has-label {
   p:last-child {
     margin: 0;
   }
+  &--small {
+    .heading-group {
+      margin-bottom:0.25rem;
+      .superhead, .subhead {
+        font-size:1rem;
+      }
+      h2 {
+        text-transform:uppercase;
+        font-size:1.5rem;
+        font-weight: 700;
+        font-family:$mono;
+      }
+    }
+    p {
+      font-size:1rem;
+    }
+    &::before {
+      width: 12px;
+      height: 12px;
+      left: -9px;
+      margin-top:4px;
+    }
+  }
+  &--notice {
+    background:$gray100;
+    .heading-group {
+      margin:0;
+    }
+    h2, h3 {
+      @extend h5;
+      font-size:1.5rem;
+    }
+
+  }
 }
 .accordion-slab {
   display:flex;
@@ -1424,11 +1514,40 @@ h3.has-label {
   gap: 1.5rem;
   .card {
     width: calc(33.33% - 1rem);
+    p + ul {
+      margin-top:1rem;
+    }
     @media screen and (max-width: 900px) {
       width: calc(50% - 0.75rem);
     }
     @media screen and (max-width: 600px) {
       width: 100%;
+    }
+  }
+  &--portals {
+    .card {
+      width: calc(50% - 0.75rem);
+      display:flex;
+      flex-direction:column;
+      @media screen and (max-width: 600px) {
+        width: 100%;
+      }
+      ul {
+        height:100%;
+      }
+    }
+    .card:nth-child(2), .card:nth-child(3), .card:nth-child(4) {
+      border-color:$gray300;
+    }
+    .card:nth-child(5), .card:nth-child(6), .card:nth-child(7) {
+      width: calc(33.33% - 1rem);
+      border-color:$gray300;
+      @media screen and (max-width: 900px) {
+        width: calc(50% - 0.75rem);
+      }
+      @media screen and (max-width: 600px) {
+        width: 100%;
+      }
     }
   }
   &--half {
@@ -1908,6 +2027,11 @@ table {
         font-style: italic;
         color: $gray700;
       }
+      .disabled {
+        padding:0.75rem;
+        display:block;
+        color:$gray400;
+      }
       &:last-child {
         border-bottom: none;
       }
@@ -2162,7 +2286,7 @@ table {
   gap:1.5rem;
   padding:0 1.5rem;
   margin-bottom:3rem;
-  @media screen and (max-width:750px) {
+  @media screen and (max-width:900px) {
     flex-wrap:wrap;
   }
   .sidebar {
@@ -2171,7 +2295,7 @@ table {
     position:sticky;
     top:1rem;
     align-self:flex-start;
-    @media screen and (max-width:750px) {
+    @media screen and (max-width:900px) {
       width:100%;
       order:2;
     }
@@ -2202,7 +2326,7 @@ table {
   }
   .main-content {
     width:75%;
-    @media screen and (max-width:750px) {
+    @media screen and (max-width:900px) {
       width:100%;
       order:1;
     }
