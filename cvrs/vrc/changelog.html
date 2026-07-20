@@ -154,34 +154,5 @@
                 <p>&copy; <script>document.write(new Date().getFullYear())</script> Center for Vice Research and Support &bull; <a href="#">Sitemap</a></p>
             </div>
         </footer>
-        <script>
-            function descSort() {
-            // Declare variables
-            var input, filter, dl, div, a, i, txtValue;
-            input = document.getElementById('filter');
-            filter = input.value.toUpperCase();
-            dl = document.getElementById("dl");
-            div = dl.getElementsByTagName('div');
-            
-            // Loop through all list items, and hide those who don't match the search query
-            for (i = 0; i < div.length; i++) {
-                dt = div[i].getElementsByTagName("dt")[0];
-                txtValue = dt.textContent || dt.innerText;
-                if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                div[i].style.display = "";
-                } else {
-                div[i].style.display = "none";
-                }
-            }
-            }
-            function readingTime() {
-                const text = document.getElementById("main-content").innerText;
-                const wpm = 225;
-                const words = text.trim().split(/\s+/).length;
-                const time = Math.ceil(words / wpm);
-                document.getElementById("time").innerText = time;
-                }
-            readingTime();
-        </script>
     </body>
 </html>
